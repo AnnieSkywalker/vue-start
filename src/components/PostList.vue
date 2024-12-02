@@ -1,15 +1,20 @@
 <template>
     <section class="posts" >
-        <!-- <h2 class="section-title">
-            Посты не найдены!
-        </h2> -->
-        <h2 class="section-title">
+        <div v-if='posts.length > 0'>
+            <h2 class="section-title">
             Список постов
+            </h2>
+            <PostsItem 
+                v-for='post in posts'
+                :post='post'
+                :key='post.id'
+                @remove="$emit('remove', post)"
+            ></PostsItem>
+        </div>
+        <h2 v-else class="section-title">
+            Посты не найдены!
         </h2>
-        <PostsItem 
-            v-for='post in posts'
-            :post='post'
-        ></PostsItem>
+        
     </section>
 </template>
 
