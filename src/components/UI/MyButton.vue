@@ -1,0 +1,68 @@
+<template>
+    <button class='myBtn' :class='myClass'><slot></slot></button>
+</template>
+
+<script>
+    export default {
+        name: 'my-button',
+        props: {
+            myClass: {
+                type: String,
+                default: {}
+            }
+        }
+        
+    }
+</script>
+
+<style lang="css" scoped>
+.myBtn {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px solid #262626;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 20px;
+    gap: 10px;
+    cursor: pointer;
+    height: 50px;
+    min-width: 150px;
+    flex: none;
+    flex-grow: 1;
+}
+
+.myBtn:hover {
+    opacity: 0.6;
+}
+
+.myBtn.add {
+    padding: 0;
+    max-width: 875px;
+    min-width: 150px;
+    height: 50px;
+    background: none;
+    background-image: url(../../images/plus.svg);
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #ff3333;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.myBtn.open {
+    background: #ff3333;
+    border-radius: 8px;
+}
+
+.myBtn.del {
+    background: #141414;
+    border: 1px solid #262626;
+    border-radius: 6px;
+}
+</style>

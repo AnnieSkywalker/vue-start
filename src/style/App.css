@@ -3,3 +3,6 @@
 @import url(./vendor/fonts.css);
 
 @import url(./blocks/page/page.css);
+@import url(./blocks/section-title/section-title.css);
+@import url(./blocks/section-subtitle/section-subtitle.css);
+
