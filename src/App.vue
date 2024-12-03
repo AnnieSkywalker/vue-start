@@ -10,7 +10,7 @@
             :posts='posts'
             @remove='removePost'
         />
-        <my-loader></my-loader>
+        <my-loader v-else></my-loader>
     </div>
     
 </template>
