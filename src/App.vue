@@ -2,15 +2,15 @@
     <div>
         <my-button class='add' @click='showVisible'>
         </my-button>
-        <my-button @click='postFetch'>set posts</my-button>
         <my-dialog v-model:show='dialogVisible' >
             <PostForm @create ='createPost' />
         </my-dialog>
         <PostList 
+            v-if='!isPostsLoading'
             :posts='posts'
             @remove='removePost'
         />
-
+        <my-loader></my-loader>
     </div>
     
 </template>
@@ -28,7 +28,8 @@ export default {
     data () {
         return {
             posts : [],
-            dialogVisible: false
+            dialogVisible: false,
+            isPostsLoading: false,
         }
     },
     methods: {
@@ -44,12 +45,15 @@ export default {
         },
         async postFetch () {
             try {
-                let response = await axios('https://jsonplaceholder.typicode.com/posts?_limit=10');
+                let response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10');
                 this.posts = response.data;
             } catch (e) {
                 console.log(e);
             }
         }
+    },
+    mounted () {
+        this.postFetch();
     }
 }
 
