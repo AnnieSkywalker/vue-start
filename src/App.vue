@@ -1,8 +1,8 @@
 <template>
     <div>
         <my-button class='add' @click='showVisible'>
-
         </my-button>
+        <my-button @click='postFetch'>set posts</my-button>
         <my-dialog v-model:show='dialogVisible' >
             <PostForm @create ='createPost' />
         </my-dialog>
@@ -18,6 +18,8 @@
 <script>
 import PostForm from './components/PostForm.vue';
 import PostList from './components/PostList.vue';
+import MyButton from './components/UI/MyButton.vue';
+import axios from 'axios';
 
 export default {
     components: {
@@ -25,11 +27,7 @@ export default {
     },
     data () {
         return {
-            posts : [
-                {id: 1, title: 'название1', body: 'описание1'},
-                {id: 2, title: 'название2', body: 'описание2'},
-                {id: 3, title: 'название3', body: 'описание3'}
-            ],
+            posts : [],
             dialogVisible: false
         }
     },
@@ -43,6 +41,14 @@ export default {
         },
         showVisible () {
             this.dialogVisible = true;
+        },
+        async postFetch () {
+            try {
+                let response = await axios('https://jsonplaceholder.typicode.com/posts?_limit=10');
+                this.posts = response.data;
+            } catch (e) {
+                console.log(e);
+            }
         }
     }
 }
