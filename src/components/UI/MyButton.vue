@@ -1,17 +1,10 @@
 <template>
-    <button class='myBtn' :class='myClass'><slot></slot></button>
+    <button class='myBtn'><slot></slot></button>
 </template>
 
 <script>
     export default {
         name: 'my-button',
-        props: {
-            myClass: {
-                type: String,
-                default: {}
-            }
-        }
-        
     }
 </script>
 

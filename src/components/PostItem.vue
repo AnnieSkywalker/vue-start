@@ -8,8 +8,8 @@
             </div>
         </div>
         <div class="post__btn">
-            <my-button :myClass='open'>Открыть</my-button>
-            <my-button :myClass='del' @click="$emit('remove', post)">Удалить</my-button>
+            <my-button class='open'>Открыть</my-button>
+            <my-button class='del' @click="$emit('remove', post)">Удалить</my-button>
         </div>
     </div>
 </template>

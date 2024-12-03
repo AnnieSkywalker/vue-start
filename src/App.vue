@@ -1,9 +1,18 @@
 <template>
-    <PostForm @create ='createPost' />
-    <PostList 
-        :posts='posts'
-        @remove='removePost'
-    />
+    <div>
+        <my-button class='add' @click='showVisible'>
+
+        </my-button>
+        <my-dialog v-model:show='dialogVisible' >
+            <PostForm @create ='createPost' />
+        </my-dialog>
+        <PostList 
+            :posts='posts'
+            @remove='removePost'
+        />
+
+    </div>
+    
 </template>
 
 <script>
@@ -21,16 +30,19 @@ export default {
                 {id: 2, title: 'название2', body: 'описание2'},
                 {id: 3, title: 'название3', body: 'описание3'}
             ],
-            title: '',
-            body: ''
+            dialogVisible: false
         }
     },
     methods: {
         createPost (post) {
             this.posts.push(post);
+            this.dialogVisible = false;
         },
         removePost (post) {
             this.posts = this.posts.filter(p => p.id !== post.id)
+        },
+        showVisible () {
+            this.dialogVisible = true;
         }
     }
 }

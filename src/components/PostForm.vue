@@ -10,7 +10,7 @@
             type="text" 
             placeholder='описание'
         />
-        <button @click='createPost' class='myBtn add'></button>
+        <my-button class='add' @click='createPost'></my-button>
     </form>
 </template>
 
