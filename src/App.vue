@@ -45,10 +45,14 @@ export default {
         },
         async postFetch () {
             try {
+                this.isPostsLoading = true;
                 let response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10');
                 this.posts = response.data;
             } catch (e) {
                 console.log(e);
+            }
+            finally {
+                this.isPostsLoading = false;
             }
         }
     },
