@@ -37,6 +37,7 @@ import PostsItem from './PostItem.vue';
 </script>
 
 <style lang="css" scoped>
+.post-list-move,
 .post-list-enter-active,
 .post-list-leave-active {
   transition: all 0.4s ease;
