@@ -2,6 +2,9 @@
     <div>
         <my-button class='add' @click='showVisible'>
         </my-button>
+
+        <my-select v-model='selectedSort' :options='sortOptions'></my-select>
+
         <my-dialog v-model:show='dialogVisible' >
             <PostForm @create ='createPost' />
         </my-dialog>
@@ -30,6 +33,11 @@ export default {
             posts : [],
             dialogVisible: false,
             isPostsLoading: false,
+            selectedSort: '',
+            sortOptions: [
+                {value: 'title', name: 'по названию'},
+                {value: 'body', name: 'по описанию'}
+            ]
         }
     },
     methods: {
@@ -58,6 +66,13 @@ export default {
     },
     mounted () {
         this.postFetch();
+    },
+    watch: {
+        selectedSort (newValue) {
+            this.posts.sort((post1, post2) => {
+                return post1[newValue]?.localeCompare(post2[newValue])
+            })
+        }
     }
 }
 
