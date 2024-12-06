@@ -40,11 +40,12 @@ import PostsItem from './PostItem.vue';
 .post-list-move,
 .post-list-enter-active,
 .post-list-leave-active {
-  transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
+
 .post-list-enter-from,
 .post-list-leave-to {
-  opacity: 0;
-  transform: translatex(130px);
+    opacity: 0;
+    transform: translatex(130px);
 }
 </style>

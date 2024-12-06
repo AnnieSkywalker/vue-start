@@ -3,6 +3,11 @@
         <my-button class='add' @click='showVisible'>
         </my-button>
 
+        <my-input
+            v-model='searchQuery'
+            placeholder='поиск...'
+        ></my-input>
+
         <my-select v-model='selectedSort' :options='sortOptions'></my-select>
 
         <my-dialog v-model:show='dialogVisible' >
@@ -10,7 +15,7 @@
         </my-dialog>
         <PostList 
             v-if='!isPostsLoading'
-            :posts='posts'
+            :posts='sortedAndSearchedPost'
             @remove='removePost'
         />
         <my-loader v-else></my-loader>
@@ -34,6 +39,7 @@ export default {
             dialogVisible: false,
             isPostsLoading: false,
             selectedSort: '',
+            searchQuery: '',
             sortOptions: [
                 {value: 'title', name: 'по названию'},
                 {value: 'body', name: 'по описанию'}
@@ -67,13 +73,14 @@ export default {
     mounted () {
         this.postFetch();
     },
-    watch: {
-        selectedSort (newValue) {
-            this.posts.sort((post1, post2) => {
-                return post1[newValue]?.localeCompare(post2[newValue])
-            })
+    computed: {
+        sortedPost () {
+            return [...this.posts].sort((post1, post2) => post1[this.selectedSort]?.localeCompare(post2[this.selectedSort]))
+        },
+        sortedAndSearchedPost () {
+            return this.sortedPost.filter(post => post.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
         }
-    }
+    },
 }
 
 </script>
