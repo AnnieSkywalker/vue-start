@@ -1,6 +1,6 @@
 <template>
     <div class='main-container'>
-        <header id='header' class='header'></header>
+        <app-header></app-header>
         <main id='main' class='content'>
             <div class='app'>
                 <RouterView></RouterView>
@@ -12,11 +12,12 @@
 
 <script>
 import AppFooter from './components/Footer.vue';
+import AppHeader from './components/Header.vue'
 import { RouterView } from 'vue-router';
 
     export default {
         components: {
-            AppFooter
+            AppFooter, AppHeader
         }
     }
 </script>

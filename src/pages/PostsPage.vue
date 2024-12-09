@@ -1,20 +1,21 @@
 <template>
     <div>
-        <my-button 
-            class='add' 
-            @click='showVisible'
-        >
-        </my-button>
+        <section class="management">
+            <my-button 
+                class='add' 
+                @click='showVisible'
+            ></my-button>
 
-        <my-input
-            v-model='searchQuery'
-            placeholder='поиск...'
-        ></my-input>
+            <my-input
+                v-model='searchQuery'
+                placeholder='поиск...'
+            ></my-input>
 
-        <my-select 
-            v-model='selectedSort' 
-            :options='sortOptions'
-        ></my-select>
+            <my-select 
+                v-model='selectedSort' 
+                :options='sortOptions'
+            ></my-select>
+        </section>
 
         <my-dialog v-model:show='dialogVisible' >
             <post-form @create ='createPost' />
@@ -109,5 +110,10 @@ import axios from 'axios';
 </script>
 
 <style lang="css" scoped>
-
+.management {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 </style>
