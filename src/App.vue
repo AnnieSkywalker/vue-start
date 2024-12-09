@@ -1,50 +1,55 @@
 <template>
-    <div>
-        <my-button 
-            class='add' 
-            @click='showVisible'
-        >
-        </my-button>
+    <div class='main-container'>
+        <header id='header' class='header'></header>
+        <main id='main' class='content'>
+            <div class='app'>
+                <my-button 
+                    class='add' 
+                    @click='showVisible'
+                >
+                </my-button>
 
-        <my-input
-            v-model='searchQuery'
-            placeholder='поиск...'
-        ></my-input>
+                <my-input
+                    v-model='searchQuery'
+                    placeholder='поиск...'
+                ></my-input>
 
-        <my-select 
-            v-model='selectedSort' 
-            :options='sortOptions'
-        ></my-select>
+                <my-select 
+                    v-model='selectedSort' 
+                    :options='sortOptions'
+                ></my-select>
 
-        <my-dialog v-model:show='dialogVisible' >
-            <PostForm @create ='createPost' />
-        </my-dialog>
-        
-        <PostList 
-            v-if='!isPostsLoading'
-            :posts='sortedAndSearchedPost'
-            @remove='removePost'
-        />
-        <my-loader v-else></my-loader>
+                <my-dialog v-model:show='dialogVisible' >
+                    <PostForm @create ='createPost' />
+                </my-dialog>
 
-        <my-pagination
-            :totalPage='totalPage'
-            :page='page'
-            @changePage='changePage'
-        ></my-pagination>
+                <PostList 
+                    v-if='!isPostsLoading'
+                    :posts='sortedAndSearchedPost'
+                    @remove='removePost'
+                />
+                <my-loader v-else></my-loader>
+
+                <my-pagination
+                    :totalPage='totalPage'
+                    :page='page'
+                    @changePage='changePage'
+                ></my-pagination>
+            </div>
+        </main>
+        <main-footer></main-footer>
     </div>
-    
 </template>
 
 <script>
 import PostForm from './components/PostForm.vue';
 import PostList from './components/PostList.vue';
-import MyButton from './components/UI/MyButton.vue';
 import axios from 'axios';
+import MainFooter from './components/MainFooter.vue';
 
 export default {
     components: {
-        PostForm, PostList
+        PostForm, PostList, MainFooter
     },
     data () {
         return {
