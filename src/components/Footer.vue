@@ -1,15 +1,15 @@
 <template>
     <footer id='footer' class='footer'>
-            <div class="footer__container">
-                <p class="footer__copyright">© {{ date }} Pet-Project</p>
-                <p class="footer__discription">Пет-проект (pet — англ. «домашний питомец, любимец») — это проект, который разработчик делает для себя, в свободное от основной работы время. Это отличный способ попробовать новые технологии, развить свои навыки и просто убить время.</p>
-            </div>
-        </footer>
+        <div class="footer__container">
+            <p class="footer__copyright">© {{ date }} Pet-Project</p>
+            <p class="footer__discription">Пет-проект (pet — англ. «домашний питомец, любимец») — это проект, который разработчик делает для себя, в свободное от основной работы время. Это отличный способ попробовать новые технологии, развить свои навыки и просто убить время.</p>
+        </div>
+    </footer>
 </template>
 
 <script>
     export default {
-        name: 'main-footer',
+        name: 'app-footer',
         data() {
             return {
                 date: 0

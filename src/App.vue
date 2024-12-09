@@ -6,19 +6,20 @@
                 <RouterView></RouterView>
             </div>
         </main>
-        <main-footer></main-footer>
+        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
-import MainFooter from './components/MainFooter.vue';
+import AppFooter from './components/Footer.vue';
 import { RouterView } from 'vue-router';
 
     export default {
-        components: MainFooter
+        components: {
+            AppFooter
+        }
     }
 </script>
-
 
 <style scoped>
 </style>

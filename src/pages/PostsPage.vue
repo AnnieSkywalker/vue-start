@@ -17,10 +17,10 @@
         ></my-select>
 
         <my-dialog v-model:show='dialogVisible' >
-            <PostForm @create ='createPost' />
+            <post-form @create ='createPost' />
         </my-dialog>
 
-        <PostList 
+        <post-list
             v-if='!isPostsLoading'
             :posts='sortedAndSearchedPost'
             @remove='removePost'
