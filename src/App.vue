@@ -1,6 +1,9 @@
 <template>
     <div>
-        <my-button class='add' @click='showVisible'>
+        <my-button 
+            class='add' 
+            @click='showVisible'
+        >
         </my-button>
 
         <my-input
@@ -8,17 +11,27 @@
             placeholder='поиск...'
         ></my-input>
 
-        <my-select v-model='selectedSort' :options='sortOptions'></my-select>
+        <my-select 
+            v-model='selectedSort' 
+            :options='sortOptions'
+        ></my-select>
 
         <my-dialog v-model:show='dialogVisible' >
             <PostForm @create ='createPost' />
         </my-dialog>
+        
         <PostList 
             v-if='!isPostsLoading'
             :posts='sortedAndSearchedPost'
             @remove='removePost'
         />
         <my-loader v-else></my-loader>
+
+        <my-pagination
+            :totalPage='totalPage'
+            :page='page'
+            @changePage='changePage'
+        ></my-pagination>
     </div>
     
 </template>
@@ -40,6 +53,9 @@ export default {
             isPostsLoading: false,
             selectedSort: '',
             searchQuery: '',
+            page: 1,
+            limit: 10,
+            totalPage: 0,
             sortOptions: [
                 {value: 'title', name: 'по названию'},
                 {value: 'body', name: 'по описанию'}
@@ -57,10 +73,20 @@ export default {
         showVisible () {
             this.dialogVisible = true;
         },
+        changePage (pageNumber) {
+            this.page = pageNumber;
+            this.postFetch();
+        },
         async postFetch () {
             try {
                 this.isPostsLoading = true;
-                let response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10');
+                let response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10', {
+                    params: {
+                        _page: this.page,
+                        _limit: this.limit,
+                    }
+                });
+                this.totalPage = Math.ceil(response.headers['x-total-count']/this.limit)
                 this.posts = response.data;
             } catch (e) {
                 console.log(e);
@@ -82,12 +108,7 @@ export default {
         }
     },
 }
-
 </script>
 
 <style scoped>
-
-
-
-
 </style>
