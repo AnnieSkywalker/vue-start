@@ -1,7 +1,7 @@
 <template>
     <footer id='footer' class='footer'>
             <div class="footer__container">
-                <p class="footer__copyright">© 2024 Pet-Project</p>
+                <p class="footer__copyright">© {{ date }} Pet-Project</p>
                 <p class="footer__discription">Пет-проект (pet — англ. «домашний питомец, любимец») — это проект, который разработчик делает для себя, в свободное от основной работы время. Это отличный способ попробовать новые технологии, развить свои навыки и просто убить время.</p>
             </div>
         </footer>
@@ -9,6 +9,21 @@
 
 <script>
     export default {
+        name: 'main-footer',
+        data() {
+            return {
+                date: 0
+            }
+        },
+        methods: {
+            getDate() {
+                let xmas = new Date();
+                this.date = xmas.getFullYear()
+            }
+        },
+        mounted () {
+            this.getDate();
+        }
         
     }
 </script>
