@@ -15,11 +15,11 @@ import AppFooter from './components/Footer.vue';
 import AppHeader from './components/Header.vue'
 import { RouterView } from 'vue-router';
 
-    export default {
-        components: {
-            AppFooter, AppHeader
-        }
+export default {
+    components: {
+        AppFooter, AppHeader
     }
+}
 </script>
 
 <style scoped>
