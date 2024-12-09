@@ -5,7 +5,8 @@ import MyLoader from "./MyLoader.vue"
 import MyPagination from "./MyPagination.vue"
 import MySection from "./MySection.vue"
 import MySelect from "./MySelect.vue"
+import SocialBlock from "./MySocialBlock.vue"
 
 export default [
-    MyButton, MyInput, MyDialog, MyLoader, MySelect, MyPagination,MySection
+    MyButton, MyInput, MyDialog, MyLoader, MySelect, MyPagination, MySection, SocialBlock
 ]

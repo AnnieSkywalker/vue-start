@@ -30,7 +30,6 @@
     line-height: 150%;
     color: #fff;
     outline:none;
-    margin-bottom: 15px;
 }
  
 .myInput::placeholder {

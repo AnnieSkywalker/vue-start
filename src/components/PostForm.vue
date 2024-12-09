@@ -4,11 +4,13 @@
             v-model='post.title'
             type="text" 
             placeholder='название'
+            class='input__margin-bottom'
         />
         <my-input 
             v-model='post.body'
             type="text" 
             placeholder='описание'
+            class='input__margin-bottom'
         />
         <my-button class='add' @click='createPost'></my-button>
     </form>
@@ -38,6 +40,10 @@
 </script>
 
 <style lang="css" scoped>
+.input__margin-bottom {
+    margin-bottom: 20px;
+}
+
 .myBtn {
     font-style: normal;
     font-weight: 600;

@@ -1,22 +1,30 @@
 <template>
     <div>
-        <my-section>
-
+        <my-section class='section__margin'>
+            <project-description></project-description>
         </my-section>
-        <my-section>
+        <my-section class='section__margin'>
 
         </my-section>
     </div>
 </template>
 
 <script>
+import ProjectDescription from '@/components/ProjectDescription.vue';
 export default {
-    name: "About"
+    name: "About",
+    components: {
+        ProjectDescription
+    }
     
 }
 </script>
 
 <style lang="css" scoped>
+.section__margin {
+    margin-top: 20px;
+}
+
 .techniques {
     width: 80%;
     margin: 100px auto;

@@ -1,7 +1,7 @@
 <template>
     <header id='header' class='header'>
         <div class="header__content">
-            <img class="header__image" src="../images/Logo.svg" alt="Логотип">
+            <img class="header__image" src="../images/Logo.svg" alt="Логотип" @click='$router.push("/")'>
             <app-navbar></app-navbar>
         </div>
     </header>
@@ -19,6 +19,8 @@ import AppNavbar from './Navbar.vue'
 </script>
 
 <style lang="css" scoped>
+#glasses
+
 .header {
     padding: 25px 19px 0;
     width: 100%;
@@ -51,6 +53,7 @@ import AppNavbar from './Navbar.vue'
     display: block;
     height: 55px;
     padding: 20px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px)  {
