@@ -6,8 +6,9 @@
             </h2>
             <TransitionGroup name='post-list'>
                 <PostsItem 
-                    v-for='post in posts'
+                    v-for='(post, index) in posts'
                     :post='post'
+                    :index='index'
                     :key='post.id'
                     @remove="$emit('remove', post)"
                 ></PostsItem>

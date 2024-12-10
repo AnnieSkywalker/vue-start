@@ -1,7 +1,7 @@
 <template>
     <div class="post">
         <div class="post__content">
-            <span class="post__id">{{post.id}}</span>
+            <span class="post__id">{{ index + 1 }}</span>
             <div class="post__wrap">
                 <h3 class="post__title">{{post.title}}</h3>
                 <p class="post__body">{{post.body}}</p>
@@ -22,6 +22,10 @@
             post: {
                 type: Object,
                 required: true
+            },
+            index: {
+                type: String,
+                required: true
             }
         }
     }
@@ -29,6 +33,7 @@
 
 <style lang="css" scoped>
 .post {
+    min-height: 245px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -89,6 +94,10 @@
     font-size: 18px;
     line-height: 150%;
     color: #fff;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .post__btn {
     display: flex;
