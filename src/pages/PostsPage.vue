@@ -74,9 +74,9 @@ import axios from 'axios';
             },
             changePage (pageNumber) {
                 this.page = pageNumber;
-                this.postFetch();
+                this.postsFetch();
             },
-            async postFetch () {
+            async postsFetch () {
                 try {
                     this.isPostsLoading = true;
                     let response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10', {
@@ -96,7 +96,7 @@ import axios from 'axios';
             }
         },
         mounted () {
-            this.postFetch();
+            this.postsFetch();
         },
         computed: {
             sortedPost () {

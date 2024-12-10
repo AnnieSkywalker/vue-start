@@ -1,5 +1,8 @@
 <template>
-    <div class='loader'></div>
+    <div class='loader__wrapper'>
+        <div class='loader'></div>
+    </div>
+    
 </template>
 
 <script>
@@ -9,6 +12,12 @@
 </script>
 
 <style lang="css" scoped>
+.loader__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 .loader {
     width: 48px;
     height: 48px;
