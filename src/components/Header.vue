@@ -1,7 +1,7 @@
 <template>
     <header id='header' class='header'>
         <div class="header__content">
-            <img class="header__image" src="../images/Logo.svg" alt="Логотип" @click='$router.push("/")'>
+            <my-logo-svg @click='$router.push("/")'></my-logo-svg>
             <app-navbar></app-navbar>
         </div>
     </header>
@@ -9,11 +9,12 @@
 
 <script>
 import AppNavbar from './Navbar.vue'
+import MyLogoSvg from '../components/UI/Login.vue'
 
     export default {
         name: 'app-header',
         components: {
-            AppNavbar
+            AppNavbar, MyLogoSvg
         }
     }
 </script>
