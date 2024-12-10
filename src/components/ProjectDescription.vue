@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import {SocialProfileConfig} from '../utils/constants'
+import {SocialProjectConfig} from '../utils/constants'
 import MySocialBlock from './UI/MySocialBlock.vue';
     export default {
         name: 'project-description',
@@ -41,7 +41,7 @@ import MySocialBlock from './UI/MySocialBlock.vue';
         },
         data () {
             return {
-                options: SocialProfileConfig,
+                options: SocialProjectConfig,
             }
         },
     }

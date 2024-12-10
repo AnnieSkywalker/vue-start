@@ -4,19 +4,20 @@
             <project-description></project-description>
         </my-section>
         <my-section class='section__margin'>
-
+            <profile></profile>
         </my-section>
     </div>
 </template>
 
 <script>
 import ProjectDescription from '@/components/ProjectDescription.vue';
+import Profile from '@/components/Profile.vue';
+
 export default {
     name: "About",
     components: {
-        ProjectDescription
+        ProjectDescription, Profile
     }
-    
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <header id='header' class='header'>
         <div class="header__content">
-            <my-logo-svg @click='$router.push("/")'></my-logo-svg>
+            <my-logo @click='$router.push("/")'></my-logo>
             <app-navbar></app-navbar>
         </div>
     </header>
@@ -9,12 +9,11 @@
 
 <script>
 import AppNavbar from './Navbar.vue'
-import MyLogoSvg from '../components/UI/Login.vue'
 
     export default {
         name: 'app-header',
         components: {
-            AppNavbar, MyLogoSvg
+            AppNavbar
         }
     }
 </script>
@@ -48,6 +47,7 @@ import MyLogoSvg from '../components/UI/Login.vue'
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 30px 0 15px;
 }
 
 .header__image {

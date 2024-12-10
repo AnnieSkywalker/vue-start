@@ -1,16 +1,16 @@
 <template>
-    <div id='my-logo-svg' @click.stop ='rotateGlasses'>
+    <div id='my-logo' @click.stop ='rotateGlasses'>
         <svg 
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
-        class="my-logo-svg"
+        class="my-logo"
         width="55"
         height="55"
         viewBox="0 0 843.000000 781.000000"
         preserveAspectRatio="xMidYMid meet">
-            <g class="my-logo-svg_g" transform="translate(0.000000,781.000000) scale(0.100000,-0.100000)"
+            <g class="my-logo_g" transform="translate(0.000000,781.000000) scale(0.100000,-0.100000)"
             fill="#000000" stroke="none">
-                <path class="my-logo-svg_base" d="M3490 7096 c0 -8 22 -48 49 -88 105 -159 161 -297 161 -399 0 -72
+                <path class="my-logo_base" d="M3490 7096 c0 -8 22 -48 49 -88 105 -159 161 -297 161 -399 0 -72
                 -19 -79 -71 -29 -53 51 -142 104 -221 131 -64 21 -214 52 -229 47 -6 -2 18
                 -21 53 -43 96 -61 194 -159 244 -244 24 -42 44 -81 44 -88 0 -6 -26 -20 -57
                 -29 -558 -163 -914 -366 -1288 -737 -275 -272 -436 -509 -619 -909 -19 -43
@@ -44,7 +44,7 @@
                 -234 25 -65 27 -81 27 -210 0 -163 -11 -213 -82 -347 -73 -140 -178 -234 -288
                 -259 -65 -15 -181 2 -216 30 l-21 18 17 124 c19 139 23 355 7 505 -18 176 -22
                 249 -14 260 21 30 169 113 228 128 34 8 131 -1 156 -15z" fill="#ff3333"/>
-                <path class="my-logo-svg_glasses" d="M2650 4270 c-169 -14 -333 -29 -420 -39 -189 -22 -338 -33 -358 -27
+                <path class="my-logo_glasses" d="M2650 4270 c-169 -14 -333 -29 -420 -39 -189 -22 -338 -33 -358 -27
                 -18 6 -23 -1 -42 -51 -23 -63 -55 -190 -66 -265 -5 -41 -4 -49 12 -54 58 -18
                 72 -28 96 -65 15 -23 29 -59 33 -82 35 -238 59 -350 104 -484 72 -216 154
                 -337 294 -430 63 -43 103 -59 242 -103 68 -21 233 -40 347 -40 231 0 419 52
@@ -90,7 +90,7 @@
 
 <script>
     export default {
-        name: 'my-logo-svg',
+        name: 'my-logo',
         methods: {
             rotateGlasses (e) {
                 e.target.classList.add("active");
@@ -101,11 +101,11 @@
 </script>
 
 <style lang="css" scoped>
-#my-logo-svg {
+#my-logo {
     position: relative;
 }
 
-#my-logo-svg::after {
+#my-logo::after {
     content: "";
     position: absolute;
     display: block;
@@ -115,7 +115,7 @@
     height: 100%;
 }
 
-#my-logo-svg.active .my-logo-svg_glasses {
+#my-logo.active .my-logo_glasses {
     transform-origin:50% 50%;
     transform-box: fill-box;
     animation: rotateBox .5s linear;
