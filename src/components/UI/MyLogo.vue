@@ -103,6 +103,7 @@
 <style lang="css" scoped>
 #my-logo {
     position: relative;
+    margin-left: 20px;
 }
 
 #my-logo::after {
