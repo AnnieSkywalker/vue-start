@@ -3,15 +3,40 @@
         <div class='navbar__links'>
             <router-link class='navbar__link' to ='/posts'>posts</router-link>
             <router-link class='navbar__link' to ="/about">about</router-link>
+            <basic-toggle-switch :check='check' @setCheckboxVal='checked'/>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'app-navbar'
-        
+import BasicToggleSwitch from './UI/BasicToggleSwitch.vue';
+export default {
+    components: {
+        BasicToggleSwitch,
+    },
+    date () {
+        return {
+            check: false,
+        }
+    },
+    methods: {
+        checked (event) {
+            this.check = event;
+            this.toggleTheme(this.check)
+        },
+        toggleTheme(e) {
+            const el = document.body;
+
+            if (el.classList.contains("red")) {
+                el.classList.remove('red');
+                el.classList.add('teal');
+            } else {
+                el.classList.remove('teal');
+                el.classList.add('red');
+            }
+        }
     }
+}
 </script>
 
 <style lang="css" scoped>
