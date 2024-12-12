@@ -78,7 +78,7 @@
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid var(--primary-red);
+    border: 2px solid var(--primary);
     border-radius: 2px;
     cursor: pointer;
 }

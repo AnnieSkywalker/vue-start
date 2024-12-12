@@ -49,7 +49,8 @@
         cursor: pointer;
     }
     .pagination__page_current {
-        background: var(--primary-red);
+        color: var(--primary);
+        border-color: var(--primary);
     }
     .pagination__page:hover {
         background-color: var(--background-hover);

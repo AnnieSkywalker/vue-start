@@ -37,7 +37,7 @@
 }
 
 .loader::after{
-    border-color: var(--primary-red);
+    border-color: var(--primary);
     animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
     inset: 6px;
 }

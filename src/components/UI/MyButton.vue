@@ -43,13 +43,13 @@
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid var(--primary-red);
+    border: 2px solid var(--primary);
     border-radius: 2px;
     cursor: pointer;
 }
 
 .myBtn.open {
-    background: var(--primary-red);
+    background: var(--primary);
     border-radius: 8px;
 }
 

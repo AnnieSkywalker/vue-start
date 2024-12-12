@@ -1,6 +1,10 @@
 <template>
     <a v-for='link in options' :key='link.alt' :href='link.href' class='SocialBlock' :target='link.target' :rel='link.rel'>
-        <img :src='link.src' :alt='link.alt'/>
+        <icon-base
+            :width=35
+            :height=35
+            :icon-name='link.name'>
+        </icon-base>
     </a>
 </template>
 
@@ -40,12 +44,20 @@
     background-color: var(--background-hover);
 }
 
+.SocialBlock svg {
+    display: block;
+    /* width: 35px;
+    height: 35px; */
+    object-fit: cover;
+    object-position: top;
+}
+/* 
 .SocialBlock img {
     display: block;
     width: 35px;
     height: 35px;
     object-fit: cover;
     object-position: top;
-}
+} */
 
 </style>

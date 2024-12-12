@@ -26,7 +26,8 @@
         <div className='project-description__links'>
             <my-social-block 
                 :options='options'
-            ></my-social-block>
+            >
+            </my-social-block>
         </div>
     </div>
 </template>
