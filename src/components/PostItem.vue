@@ -40,8 +40,8 @@
     align-items: flex-end;
     padding: 24px;
     gap: 30px;
-    background: #1A1A1A;
-    border: 1px solid #262626;
+    background: var(--background-section);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -68,7 +68,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
-    color: #999;
+    color: var(--text);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -85,7 +85,7 @@
     font-weight: 600;
     font-size: 30px;
     line-height: 150%;
-    color: #999;
+    color: var(--text-subTitle);
     margin-right: 20px;
 }
 
@@ -93,7 +93,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 150%;
-    color: #fff;
+    color: var(--text-title);
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;

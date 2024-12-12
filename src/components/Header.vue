@@ -32,7 +32,7 @@ import AppNavbar from './Navbar.vue'
     content: '';
     display: block;
     width: 100%;
-    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+    border-bottom: 1px solid var(--border-color);
 }
 
 @media screen and (max-width: 767px)  {

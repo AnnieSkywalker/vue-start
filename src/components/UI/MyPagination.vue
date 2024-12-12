@@ -41,17 +41,17 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 100%;
-        color: #e4e4e7;
-        border: 1px solid #262626;
+        color: var(--text);
+        border: 1px solid var(--border-color);
         border-radius: 10px;
         padding: 14px 20px;
-        background: #0f0f0f;
+        background: var(--background-pagination);
         cursor: pointer;
     }
     .pagination__page_current {
-        background: #ff3333;
+        background: var(--primary-red);
     }
     .pagination__page:hover {
-        background-color: #1A1A1A;
+        background-color: var(--background-hover);
     }
 </style>

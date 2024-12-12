@@ -16,10 +16,10 @@
 
 <style lang="css" scoped>
 .navbar {
-    border: 3px solid #333;
+    border: 3px solid var(--border-color);
     border-radius: 10px;
     padding: 8px 8px 8px 30px;
-    background: #0f0f0f;
+    background: var(--background-navbar);
     margin-right: 20px;
 }
 
@@ -31,18 +31,18 @@
 }
 
 .navbar__links .MuiSwitch-root {
-    border-left: solid 3px #333;
+    border-left: solid 3px var(--border-color);
 }
 .navbar__link {
     display: block;
     font-weight: 400;
     font-size: 14px;
-    color: #bfbfbf;
+    color: var(--text);
     padding: 12px 16px;
     text-decoration: none;
 }
 
 .navbar__link:hover {
-    color: #fff;
+    color: var(--text-hover);
 }
 </style>

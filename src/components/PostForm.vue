@@ -50,7 +50,7 @@
     font-size: 14px;
     color: #FFFFFF;
     box-sizing: border-box;
-    border: 1px solid #262626;
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -78,7 +78,7 @@
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid #ff3333;
+    border: 2px solid var(--primary-red);
     border-radius: 2px;
     cursor: pointer;
 }

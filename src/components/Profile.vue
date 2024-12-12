@@ -59,6 +59,7 @@ import MySocialBlock from './UI/MySocialBlock.vue';
     text-align: start;
     width: 60%;
     font-size: 24px;
+    color: var(--text-title)
 }
 
 @media screen and (max-width: 767px)  {
@@ -71,7 +72,7 @@ import MySocialBlock from './UI/MySocialBlock.vue';
 .profile__section-subtitle {
     width: 80%;
     font-size: 18px;
-    color: #999;
+    color: var(--text-subTitle);
 }
 
 @media screen and (max-width: 767px)  {

@@ -20,7 +20,7 @@
 <style lang="css" scoped>
 .myInput {
     width: 100%;
-    border: 1px solid #262626;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 16px;
     background: #141414;
@@ -33,7 +33,7 @@
 }
  
 .myInput::placeholder {
-    color: #999;
+    color: var(--text);
 }
 
 input:focus {

@@ -1,0 +1,63 @@
+:root {
+    /* This is a absolute white and black. */
+    --black-color: #000;
+    --white-color: #fff;
+
+    /* Primary Colors - The foundational color representing brand identity in this template */
+    --primary-color-45: #f50000;
+    --primary-color-50: #ff0000;
+    --primary-color-55: #ff1919;
+    --primary-color-60: #ff3333;
+    --primary-color-80: #ff9999;
+    --primary-color-90: #ffcccc;
+    --primary-color-95: #ffe5e5;
+    --primary-color-99: #fffafa;
+
+    /* Dark Colors - Setting the thematic tone and serving as the predominant background hues in this template */
+    --dark-colors-06: #0f0f0f;
+    --dark-colors-08: #141414;
+    --dark-colors-10: #1a1a1a;
+    --dark-colors-12: #1f1f1f;
+    --dark-colors-15: #262626;
+    --dark-colors-20: #333333;
+    --dark-colors-25: #404040;
+    --dark-colors-30: #4c4c4c;
+
+    /* Grey Colors - Employed for creating inviting and readable text elements throughout the template */
+    --grey-colors-60: #999999;
+    --grey-colors-65: #a6a6a6;
+    --grey-colors-70: #b3b3b3;
+    --grey-colors-75: #bfbfbf;
+    --grey-colors-90: #e4e4e7;
+    --grey-colors-95: #f1f1f3;
+    --grey-colors-97: #f7f7f8;
+    --grey-colors-99: #fcfcfd;
+
+    /* primary theme Dark */
+    --primary-red: var(--primary-color-60);
+    --primary-red-lite: var(--primary-color-95);
+
+    --background-color: var(--dark-colors-12);
+    --background-ui-el: var(--dark-colors-08);
+    --background-ui-el-hover: var(--dark-colors-10);
+
+    --background-footer: var(--dark-colors-08);
+    --background-social: var(--dark-colors-08);
+    --background-navbar: var(--dark-colors-08);
+    --background-pagination: var(--dark-colors-08);
+    --background-hover: var(--dark-colors-10);
+
+    --background-section: var(--dark-colors-10);
+
+    --border-color: var(--dark-colors-20);
+
+    --text-title: var(--grey-colors-95);
+    --text-subTitle: var(--grey-colors-70);
+    --text: var(--grey-colors-65);
+    --text-hover: var(--grey-colors-99);
+
+
+
+    --fill-svg-face: var(--dark-colors-06);
+
+} 

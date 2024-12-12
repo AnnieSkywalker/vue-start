@@ -68,7 +68,7 @@ import MySocialBlock from './UI/MySocialBlock.vue';
 .project-description__subtitle {
     width: 100%;
     font-size: 18px;
-    color: #999;
+    color: var(--text-subTitle);
 }
 
 @media screen and (max-width: 767px) {
@@ -86,8 +86,8 @@ import MySocialBlock from './UI/MySocialBlock.vue';
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #0f0f0f;
-    border: 2px solid #232329;
+    background-color: var(--background-social);
+    border: 2px solid var(--border-color);
     border-radius: 12px;
     padding: 10px;
 }

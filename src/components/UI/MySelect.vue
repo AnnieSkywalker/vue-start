@@ -33,18 +33,18 @@
     font-size: 16px;
     font-family: sans-serif;
     font-weight: 700;
-    color: #999;
+    color: var(--text);
     line-height: 1.3;
     padding: .6em 1.4em .5em .8em; width: 100%; 
     max-width: 100%;
     box-sizing: border-box;
     margin: 0; 
-    border: 1px solid #282828;
+    border: 1px solid var(--border-color);
     border-radius: .5em;
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    background-color: #141414;
+    background-color: var(--background-ui-el);
     background-image: url('../../images/down.svg');
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
@@ -52,10 +52,10 @@
 } 
 .MySelect::-ms-expand { display: none; }
 
-.sMySelect:hover { border-color: #141414; }
+.sMySelect:hover { border-color: var(--background-ui-el-hover); }
 
-.MySelect:focus { border-color: #262626;
-    color: #999;
+.MySelect:focus { border-color: var(--background-ui-el-hover);
+    color: var(--text);
     outline: none;
 }
 

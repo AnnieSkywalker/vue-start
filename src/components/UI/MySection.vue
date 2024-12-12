@@ -18,8 +18,8 @@
     flex-direction: column;
     align-items: flex-end;
     padding: 20px;
-    background: #1A1A1A;
-    border: 1px solid #262626;
+    background: var(--background-section);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     margin-bottom: 10px;
 }

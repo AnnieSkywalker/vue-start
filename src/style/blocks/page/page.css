@@ -6,7 +6,8 @@
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
-    background-color: #1E1E1E;
+    /* background-color: #1E1E1E; */
+    background-color: var(--background-color);
     color: #FFF;
     display: flex;
     justify-content: center;

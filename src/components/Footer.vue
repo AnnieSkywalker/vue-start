@@ -36,7 +36,7 @@
         display: flex;
         justify-content: flex-start;
         box-sizing: border-box;
-        background: #0f0f0f;
+        background: var(--background-footer);
     }
     .footer__container {
         width: 100%;
@@ -47,7 +47,7 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 150%;
-        color: #999;
+        color: var(--text-subTitle);
     }
     @media screen and (max-width: 767px)  {
         .footer__copyright {
@@ -62,6 +62,6 @@
         font-size: 12px;
         font-weight: 400;
         line-height: 150%;
-        color: #999;
+        color: var(--text);
     }
 </style>

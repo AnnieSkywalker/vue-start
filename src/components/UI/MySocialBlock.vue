@@ -21,15 +21,15 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 140%;
-    color: #999;
+    color: var(--text);
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 30px;
     text-decoration: none;
     cursor: pointer;
-    background-color: #0f0f0f;
-    border: 2px solid #232329;
+    background-color: var(--background-social);
+    border: 2px solid var(--border-color);
     border-radius: 12px;
     padding: 10px;
     width: 35px;
@@ -37,7 +37,7 @@
 }
 
 .SocialBlock:hover {
-    background-color: #232329;
+    background-color: var(--background-hover);
 }
 
 .SocialBlock img {

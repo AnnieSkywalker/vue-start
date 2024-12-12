@@ -37,6 +37,7 @@ export default {
 .techniques__section-title {
   margin: 0;
   text-align: center;
+  color: var(--text-title)
 }
 
 .techniques__section-subtitle {

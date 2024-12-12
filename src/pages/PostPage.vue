@@ -49,16 +49,19 @@ import axios from 'axios';
 <style lang="css" scoped>
 .post-page__title {
     font-size: 25px;
+    color: var(--text-title)
 }
 
 .post-page__id {
     font-size: 40px;
     margin: 10px 0;
+    color: var(--text-subTitle);
 }
 
 .post-page__body {
     font-size: 20px;
     display: block;
     -webkit-line-clamp: 0;
+    color: var(--text);
 }
 </style>
