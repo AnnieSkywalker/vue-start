@@ -60,14 +60,8 @@ body.red {
     --border-color: var(--dark-colors-20);
     --hover: var(--primary-color-80);
 
-
-
-
     --background-ui-el: var(--dark-colors-10);
     --background-ui-el-focus: var(--dark-colors-15);
-
-
-    
 
     --text-title: var(--grey-colors-95);
     --text-lite: var(--grey-colors-75);
@@ -86,12 +80,8 @@ body.red {
         --border-color: var( --teal-lighten-4);
         --hover: var(--teal-lighten-4);
 
-
-
-
         --background-ui-el: var(--teal-lighten-5);
         --background-ui-el-focus: var(--teal-lighten-4);
-
 
         --text-title: var(--teal-darken-4);
         --text-lite: var(--teal-lighten-3);
