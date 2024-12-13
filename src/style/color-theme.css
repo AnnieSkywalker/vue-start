@@ -103,7 +103,7 @@ body.red {
 
         --text-title: var(--teal-darken-4);
         /* --text-subTitle: var(--teal-darken-2); */
-        --text-subTitle: var(--black-color);
+        --text-subTitle: var(--teal-lighten-3);
         --text-main: var(--black-color);
         --text: var(--teal-darken-2);
         --text-hover: var(--grey-colors-99);

@@ -1,5 +1,5 @@
 <template>
-    <div class="post">
+    <my-section class="post"> 
         <div class="post__content">
             <span class="post__id">{{ index + 1 }}</span>
             <div class="post__wrap">
@@ -11,7 +11,7 @@
             <my-button class='open' @click='$router.push(`/posts/${post.id}`)'>Открыть</my-button>
             <my-button class='del' @click="$emit('remove', post)">Удалить</my-button>
         </div>
-    </div>
+    </my-section>
 </template>
 
 
@@ -34,16 +34,7 @@
 <style lang="css" scoped>
 .post {
     min-height: 245px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 24px;
     gap: 30px;
-    background: var(--background-section);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 .post-enter {
