@@ -39,7 +39,7 @@
 
 .myDialogContent {
     padding: 25px;
-    background-color: var(--background-section);
+    background-color: var(--background-color);
     border-radius: 16px;
     min-width: 250px;
 }

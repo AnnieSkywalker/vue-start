@@ -12,7 +12,7 @@ export default {
                 type: Boolean,
             }
     },
-    date () {
+    data () {
         return {
             checkbox: this.check,
         }
@@ -68,11 +68,11 @@ export default {
 
 .slider:before {
     position: absolute;
-    content: "";
+    content: '';
     height: 14px;
     width: 14px;
-    left: 4px;
-    bottom: 4px;
+    left: 3px;
+    bottom: 3px;
     background-color: white;
     -webkit-transition: 0.4s;
     transition: 0.4s;

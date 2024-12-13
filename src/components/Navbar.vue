@@ -59,12 +59,12 @@ export default {
     display: block;
     font-weight: 400;
     font-size: 14px;
-    color: var(--text);
+    color: var(--primary);
     padding: 12px 16px;
     text-decoration: none;
 }
 
 .navbar__link:hover {
-    color: var(--text-hover);
+    color: var(--hover);
 }
 </style>

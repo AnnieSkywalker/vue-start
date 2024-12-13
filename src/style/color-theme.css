@@ -55,53 +55,50 @@
 body.red {
     /* primary theme Dark */
     --primary: var(--primary-color-60);
-    --primary-title: var(--primary-color-95);
-
     --background-color: var(--dark-colors-12);
-    --background-ui-el: var(--dark-colors-08);
-    --background-ui-el-hover: var(--dark-colors-10);
-
-    --background-footer: var(--dark-colors-08);
-    --background-pagination: var(--dark-colors-08);
+    --background-footer: var(--dark-colors-10);
+    --border-color: var(--dark-colors-20);
     --hover: var(--primary-color-80);
 
-    --background-section: var(--dark-colors-10);
 
-    --border-color: var(--dark-colors-20);
+
+
+    --background-ui-el: var(--dark-colors-10);
+    --background-ui-el-hover: var(--dark-colors-10);
+
+
+    
 
     --text-title: var(--grey-colors-95);
     --text-lite: var(--white-color);
     --text-main: var(--white-color);
     --text: var(--grey-colors-65);
-    --text-hover: var(--grey-colors-99);
 
     --fill-svg-face: var(--dark-colors-06);
+    --fill-svg-glasses: var(--grey-colors-90);
 }
 
 
     body.teal {
         /* primary theme Teal */
         --primary: var(--teal);
-        --primary-title: var(--teal-darken-4);
-
         --background-color: var(--white-color);
+        --background-footer: var(--teal-lighten-5);
+        --border-color: var( --teal-lighten-4);
+        --hover: var(--teal-lighten-4);
+
+
+
+
         --background-ui-el: var(--dark-colors-08);
         --background-ui-el-hover: var(--dark-colors-10);
 
-        --background-footer: var(--teal-lighten-5);
-
-        --background-pagination: var(--teal-darken-4);
-        --hover: var(--teal-lighten-4);
-
-        --background-section: var(--teal-lighten-5);
-
-        --border-color: var( --teal-lighten-4);
 
         --text-title: var(--teal-darken-4);
         --text-lite: var(--teal-lighten-3);
         --text-main: var(--black-color);
         --text: var(--teal-darken-2);
-        --text-hover: var(--grey-colors-99);
 
         --fill-svg-face: var(--dark-colors-06);
+        --fill-svg-glasses: var(--teal-darken-4);
     }
