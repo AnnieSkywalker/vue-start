@@ -4,7 +4,13 @@
             <my-button 
                 class='add' 
                 @click='showVisible'
-            ></my-button>
+            >
+                <icon-base
+                    :width=22
+                    :height=22
+                    :iconName='iconName'>
+                </icon-base>
+            </my-button>
 
             <my-input
                 v-model='searchQuery'
@@ -55,6 +61,7 @@ import axios from 'axios';
                 page: 1,
                 limit: 10,
                 totalPage: 0,
+                iconName: 'plus',
                 sortOptions: [
                     {value: 'title', name: 'по названию'},
                     {value: 'body', name: 'по описанию'}

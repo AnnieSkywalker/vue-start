@@ -32,17 +32,15 @@
     gap: 30px;
     text-decoration: none;
     cursor: pointer;
-    background-color: var(--background-social);
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: 15px;
     padding: 10px;
     width: 35px;
     height: 35px;
 }
 
-.SocialBlock:hover {
+/* .SocialBlock svg g:hover {
     background-color: var(--background-hover);
-}
+} */
 
 .SocialBlock svg {
     display: block;

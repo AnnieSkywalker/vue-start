@@ -12,7 +12,13 @@
             placeholder='описание'
             class='input__margin-bottom'
         />
-        <my-button class='add' @click='createPost'></my-button>
+        <my-button class='add' @click='createPost'>
+            <icon-base
+                :width=22
+                :height=22
+                :iconName='iconName'>
+            </icon-base>
+        </my-button> 
     </form>
 </template>
 
@@ -23,7 +29,8 @@
                 post: {
                     title: '',
                     body: ''
-                }
+                },
+                iconName: 'plus'
             }
         },
         methods: {
@@ -73,11 +80,6 @@
     max-width: 875px;
     min-width: 150px;
     height: 50px;
-    background: none;
-    background-image: url(../../src/images/plus.svg);
-    object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     border: 2px solid var(--primary);
     border-radius: 2px;
     cursor: pointer;

@@ -12,7 +12,7 @@ export default {
                 type: Boolean,
             }
     },
-    data () {
+    date () {
         return {
             checkbox: this.check,
         }
@@ -31,12 +31,27 @@ export default {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 40px;
+  height: 20px;
+  margin: 10px;
+  caret-color: transparent;
+  cursor: none;
+}
+.switch::after {
+    content: '';
+    display: block;
+    width: 30px;
+    position: absolute;
+    top: 9px;
+    right: 35px;
+    border-top: 1px solid var(--border-color);
+    transform: rotate(90deg)
 }
 
 .switch input {
   display: none;
+  caret-color: transparent;
+  cursor: none;
 }
 
 .slider {
@@ -54,8 +69,8 @@ export default {
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 14px;
+    width: 14px;
     left: 4px;
     bottom: 4px;
     background-color: white;
@@ -72,9 +87,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
 }
 
 .slider.round {

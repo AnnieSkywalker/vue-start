@@ -12,6 +12,7 @@ import IconGH from "./icon/IconGH.vue"
 import IconHH from "./icon/IconHH.vue"
 import IconVK from "./icon/IconVK.vue"
 import IconTG from "./icon/IconTG.vue"
+import IconPlus from "./icon/IconPlus.vue"
 
 export default [
     MyButton,
@@ -27,5 +28,6 @@ export default [
     IconHH,
     IconGH,
     IconVK,
-    IconTG
+    IconTG,
+    IconPlus,
 ]

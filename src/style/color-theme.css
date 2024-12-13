@@ -62,8 +62,8 @@ body.red {
     --background-ui-el-hover: var(--dark-colors-10);
 
     --background-footer: var(--dark-colors-08);
-    --background-social: var(--dark-colors-08);
-    --background-navbar: var(--dark-colors-08);
+    /* --background-social: var(--dark-colors-08); */
+    /* --background-navbar: var(--dark-colors-08); */
     --background-pagination: var(--dark-colors-08);
     --background-hover: var(--dark-colors-10);
 
@@ -72,7 +72,9 @@ body.red {
     --border-color: var(--dark-colors-20);
 
     --text-title: var(--grey-colors-95);
-    --text-subTitle: var(--grey-colors-70);
+    /* --text-subTitle: var(--grey-colors-70); */
+    --text-subTitle: var(--white-color);
+    --text-main: var(--white-color);
     --text: var(--grey-colors-65);
     --text-hover: var(--grey-colors-99);
 
@@ -81,28 +83,28 @@ body.red {
 
 
     body.teal {
-        
-
         /* primary theme Teal */
         --primary: var(--teal);
         --primary-title: var(--teal-darken-4);
 
-        --background-color: var(--teal-lighten-5);
+        --background-color: var(--white-color);
         --background-ui-el: var(--dark-colors-08);
         --background-ui-el-hover: var(--dark-colors-10);
 
-        --background-footer: var(--teal-darken-4);
-        --background-social: var(--teal-darken-4);
-        --background-navbar: var(--teal-darken-4);
+        --background-footer: var(--teal-lighten-5);
+        /* --background-social: var(--teal-lighten-3); */
+        /* --background-navbar: var(--teal-darken-4); */
         --background-pagination: var(--teal-darken-4);
         --background-hover: var(--teal-darken-1);
 
-        --background-section: var(--teal-lighten-4);
+        --background-section: var(--teal-lighten-5);
 
-        --border-color: var(--teal-darken-3);
+        --border-color: var( --teal-lighten-4);
 
         --text-title: var(--teal-darken-4);
-        --text-subTitle: var(--teal-darken-2);
+        /* --text-subTitle: var(--teal-darken-2); */
+        --text-subTitle: var(--black-color);
+        --text-main: var(--black-color);
         --text: var(--teal-darken-2);
         --text-hover: var(--grey-colors-99);
 

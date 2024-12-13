@@ -76,7 +76,6 @@ import MySocialBlock from './UI/MySocialBlock.vue';
     project-description__subtitle {
         width: 100%;
         text-align: center;
-
     }
 }
 
@@ -87,9 +86,7 @@ import MySocialBlock from './UI/MySocialBlock.vue';
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: var(--background-social);
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: 15px;
     padding: 10px;
 }
 

@@ -42,7 +42,6 @@ import axios from 'axios';
         mounted () {
             this.postFetch();
         },
-
     }
 </script>
 

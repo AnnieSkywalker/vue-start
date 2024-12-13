@@ -26,7 +26,6 @@ export default {
         },
         toggleTheme(e) {
             const el = document.body;
-
             if (el.classList.contains("red")) {
                 el.classList.remove('red');
                 el.classList.add('teal');
@@ -41,10 +40,7 @@ export default {
 
 <style lang="css" scoped>
 .navbar {
-    border: 3px solid var(--border-color);
-    border-radius: 10px;
     padding: 8px 8px 8px 30px;
-    background: var(--background-navbar);
     margin-right: 20px;
 }
 
@@ -52,6 +48,7 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     gap: 5px;
 }
 
