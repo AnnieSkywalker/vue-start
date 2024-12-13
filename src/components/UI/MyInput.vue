@@ -23,21 +23,20 @@
     border: 1px solid var(--border-color);
     border-radius: 6px;
     padding: 16px;
-    background: #141414;
+    background-color: var(--background-ui-el);
     box-sizing: border-box;
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
-    color: #fff;
+    color: var(--text);
     outline:none;
 }
  
 .myInput::placeholder {
-    color: var(--text);
+    color: var(--text-lite);
 }
 
 input:focus {
-    background: #333333;
+    background: var(--background-ui-el-focus);
 }
-
 </style>

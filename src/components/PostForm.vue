@@ -71,9 +71,9 @@
     flex-grow: 1;
 }
 
-.myBtn:hover {
+/* .myBtn:hover {
     opacity: 0.6;
-}
+} */
 
 .myBtn.add {
     padding: 0;

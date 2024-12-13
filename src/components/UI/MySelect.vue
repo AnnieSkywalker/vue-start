@@ -33,7 +33,7 @@
     font-size: 16px;
     font-family: sans-serif;
     font-weight: 700;
-    color: var(--text);
+    color: var(--text-lite);
     line-height: 1.3;
     padding: .6em 1.4em .5em .8em; width: 100%; 
     max-width: 100%;

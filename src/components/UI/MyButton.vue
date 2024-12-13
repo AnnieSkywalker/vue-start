@@ -39,10 +39,6 @@
     min-width: 150px;
     height: 50px;
     background: none;
-    /* background-image: url(../../images/plus.svg);
-    object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
     border: 2px solid var(--primary);
     border-radius: 2px;
     cursor: pointer;

@@ -64,15 +64,14 @@ body.red {
 
 
     --background-ui-el: var(--dark-colors-10);
-    --background-ui-el-hover: var(--dark-colors-10);
+    --background-ui-el-focus: var(--dark-colors-15);
 
 
     
 
     --text-title: var(--grey-colors-95);
-    --text-lite: var(--white-color);
-    --text-main: var(--white-color);
-    --text: var(--grey-colors-65);
+    --text-lite: var(--grey-colors-75);
+    --text: var(--grey-colors-60);
 
     --fill-svg-face: var(--dark-colors-06);
     --fill-svg-glasses: var(--grey-colors-90);
@@ -90,13 +89,12 @@ body.red {
 
 
 
-        --background-ui-el: var(--dark-colors-08);
-        --background-ui-el-hover: var(--dark-colors-10);
+        --background-ui-el: var(--teal-lighten-5);
+        --background-ui-el-focus: var(--teal-lighten-4);
 
 
         --text-title: var(--teal-darken-4);
         --text-lite: var(--teal-lighten-3);
-        --text-main: var(--black-color);
         --text: var(--teal-darken-2);
 
         --fill-svg-face: var(--dark-colors-06);
