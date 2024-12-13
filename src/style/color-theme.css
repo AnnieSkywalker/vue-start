@@ -62,10 +62,8 @@ body.red {
     --background-ui-el-hover: var(--dark-colors-10);
 
     --background-footer: var(--dark-colors-08);
-    /* --background-social: var(--dark-colors-08); */
-    /* --background-navbar: var(--dark-colors-08); */
     --background-pagination: var(--dark-colors-08);
-    --background-hover: var(--dark-colors-10);
+    --hover: var(--primary-color-80);
 
     --background-section: var(--dark-colors-10);
 
@@ -91,10 +89,9 @@ body.red {
         --background-ui-el-hover: var(--dark-colors-10);
 
         --background-footer: var(--teal-lighten-5);
-        /* --background-social: var(--teal-lighten-3); */
-        /* --background-navbar: var(--teal-darken-4); */
+
         --background-pagination: var(--teal-darken-4);
-        --background-hover: var(--teal-darken-1);
+        --hover: var(--teal-lighten-4);
 
         --background-section: var(--teal-lighten-5);
 

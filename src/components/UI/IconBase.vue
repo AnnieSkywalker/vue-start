@@ -32,10 +32,6 @@
                 type: [Number, String],
                 default: 15
             },
-            // iconColor: {
-            //     type: String,
-            //     default: 'currentColor'
-            // }
         }
     }
 </script>
@@ -44,5 +40,7 @@
 .icon-base__g {
     fill: var(--primary)
 }
-
+svg:hover .icon-base__g {
+    fill: var(--hover)
+}
 </style>

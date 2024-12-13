@@ -38,24 +38,9 @@
     height: 35px;
 }
 
-/* .SocialBlock svg g:hover {
-    background-color: var(--background-hover);
-} */
-
 .SocialBlock svg {
     display: block;
-    /* width: 35px;
-    height: 35px; */
     object-fit: cover;
     object-position: top;
 }
-/* 
-.SocialBlock img {
-    display: block;
-    width: 35px;
-    height: 35px;
-    object-fit: cover;
-    object-position: top;
-} */
-
 </style>
