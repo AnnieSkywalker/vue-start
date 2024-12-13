@@ -76,7 +76,7 @@
     font-weight: 600;
     font-size: 30px;
     line-height: 150%;
-    color: var(--text-subTitle);
+    color: var(--text-lite);
     margin-right: 20px;
 }
 

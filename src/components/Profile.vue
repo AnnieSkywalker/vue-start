@@ -8,7 +8,7 @@
                 <h2 class="section-title profile__section-title">
                     Привет, меня зовут Андрей
                 </h2>
-                <p class="section-subtitle profile__section-subtitle">
+                <p class="profile__text">
                     Я Frontend-разработчик. Занимаюсь веб-разработкой с 2019 года. Более подробно обо мне можно узнать перейдя по ссылкам.
                 </p>
             </div>
@@ -70,14 +70,15 @@ import MySocialBlock from './UI/MySocialBlock.vue';
     }
 }
 
-.profile__section-subtitle {
+.profile__text {
     width: 80%;
-    font-size: 18px;
-    color: var(--text-subTitle);
+    font-size: 15px;
+    line-height: 150%;
+    color: var(--text);
 }
 
 @media screen and (max-width: 767px)  {
-    .profile__section-subtitle {
+    .profile__text {
         width: 100%;
         text-align: center;
     }

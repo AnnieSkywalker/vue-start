@@ -2,7 +2,7 @@
         <div class='project-description'>
         <div className='project-description__content'>
             <h2 class='section-title project-description__title'>Pet Project</h2>
-            <p class='section-subtitle project-description__subtitle'>
+            <p class='project-text'>
             Сам проект одностраничное приложение(SPA).<br/>
             Свёрстано по БЭМ с использованием технологий позволяющих делать сайт адаптивным и резиновым (@media - меди запросы, FLEX BOX)<br/>
             vue делает приложение динамичным.<br/>
@@ -66,14 +66,15 @@ import MySocialBlock from './UI/MySocialBlock.vue';
     }
 }
 
-.project-description__subtitle {
+.project-text {
     width: 100%;
-    font-size: 18px;
-    color: var(--text-subTitle);
+    font-size: 15px;
+    line-height: 150%;
+    color: var(--text);
 }
 
 @media screen and (max-width: 767px) {
-    project-description__subtitle {
+    project-text {
         width: 100%;
         text-align: center;
     }
@@ -86,8 +87,8 @@ import MySocialBlock from './UI/MySocialBlock.vue';
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-radius: 15px;
     padding: 10px;
+    color: var(--text-lite)
 }
 
 .project-description__list {

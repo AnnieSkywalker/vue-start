@@ -41,11 +41,10 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 100%;
-        color: var(--text);
+        color: var(--text-lite);
         border: 1px solid var(--border-color);
         border-radius: 10px;
         padding: 14px 20px;
-        background: var(--background-pagination);
         cursor: pointer;
     }
     .pagination__page_current {
@@ -53,6 +52,7 @@
         border-color: var(--primary);
     }
     .pagination__page:hover {
-        background-color: var(--background-hover);
+        color: var(--primary);
+        border-color: var(--primary);
     }
 </style>

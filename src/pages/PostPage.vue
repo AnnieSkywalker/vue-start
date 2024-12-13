@@ -54,7 +54,7 @@ import axios from 'axios';
 .post-page__id {
     font-size: 40px;
     margin: 10px 0;
-    color: var(--text-subTitle);
+    color: var(--text-lite);
 }
 
 .post-page__body {
