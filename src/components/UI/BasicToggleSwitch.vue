@@ -8,35 +8,37 @@
 <script>
 export default {
     props: {
-            check: {
-                type: Boolean,
-            }
+        checkedValue: {
+            type: Boolean,
+            required: true,
+            default: true,
+        }
     },
     data () {
         return {
-            checkbox: this.check,
+            checkbox: this.checkedValue,
         }
     },
     methods: {
         toggleCheckbox() {
-            this.checkbox = !this.checkbox
+            this.checkbox = !this.checkbox;
             this.$emit('setCheckboxVal', this.checkbox)
-        }
-    }
-    
+        },
+    },
 }
 </script>
   
 <style scoped>
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-  margin: 10px;
-  caret-color: transparent;
-  cursor: none;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 10px;
+    caret-color: transparent;
+    cursor: none;
 }
+
 .switch::after {
     content: '';
     display: block;

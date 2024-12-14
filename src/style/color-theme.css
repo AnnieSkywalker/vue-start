@@ -52,41 +52,38 @@
     --teal-accent-4: #00BFA5;
 }
 
-body.red {
-    /* primary theme Dark */
-    --primary: var(--primary-color-60);
-    --background-color: var(--dark-colors-12);
-    --background-footer: var(--dark-colors-10);
-    --border-color: var(--dark-colors-20);
-    --hover: var(--primary-color-80);
+body.dark {
+    --primary:                 var(--primary-color-60);
+    --background-color:        var(--dark-colors-12);
+    --background-footer:       var(--dark-colors-10);
+    --border-color:            var(--dark-colors-20);
+    --hover:                   var(--primary-color-80);
 
-    --background-ui-el: var(--dark-colors-10);
-    --background-ui-el-focus: var(--dark-colors-15);
+    --background-ui-el:        var(--dark-colors-10);
+    --background-ui-el-focus:  var(--dark-colors-15);
 
-    --text-title: var(--grey-colors-95);
-    --text-lite: var(--grey-colors-75);
-    --text: var(--grey-colors-60);
+    --text-title:              var(--grey-colors-95);
+    --text-lite:               var(--grey-colors-75);
+    --text:                    var(--grey-colors-60);
 
-    --fill-svg-face: var(--dark-colors-06);
-    --fill-svg-glasses: var(--grey-colors-90);
+    --fill-svg-face:           var(--dark-colors-06);
+    --fill-svg-glasses:        var(--grey-colors-90);
 }
 
+body.lite {
+    --primary:                 var(--teal);
+    --background-color:        var(--white-color);
+    --background-footer:       var(--teal-lighten-5);
+    --border-color:            var( --teal-lighten-4);
+    --hover:                   var(--teal-lighten-4);
 
-    body.teal {
-        /* primary theme Teal */
-        --primary: var(--teal);
-        --background-color: var(--white-color);
-        --background-footer: var(--teal-lighten-5);
-        --border-color: var( --teal-lighten-4);
-        --hover: var(--teal-lighten-4);
+    --background-ui-el:        var(--teal-lighten-5);
+    --background-ui-el-focus:  var(--teal-lighten-4);
 
-        --background-ui-el: var(--teal-lighten-5);
-        --background-ui-el-focus: var(--teal-lighten-4);
+    --text-title:              var(--teal-darken-4);
+    --text-lite:               var(--teal-lighten-3);
+    --text:                    var(--teal-darken-2);
 
-        --text-title: var(--teal-darken-4);
-        --text-lite: var(--teal-lighten-3);
-        --text: var(--teal-darken-2);
-
-        --fill-svg-face: var(--dark-colors-06);
-        --fill-svg-glasses: var(--teal-darken-4);
-    }
+    --fill-svg-face:           var(--dark-colors-06);
+    --fill-svg-glasses:        var(--teal-darken-4);
+}
