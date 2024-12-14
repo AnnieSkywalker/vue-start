@@ -71,10 +71,6 @@
     flex-grow: 1;
 }
 
-/* .myBtn:hover {
-    opacity: 0.6;
-} */
-
 .myBtn.add {
     padding: 0;
     max-width: 875px;

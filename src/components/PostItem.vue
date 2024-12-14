@@ -24,7 +24,7 @@
                 required: true
             },
             index: {
-                type: String,
+                type: Number,
                 required: true
             }
         }
