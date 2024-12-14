@@ -39,18 +39,21 @@
     min-width: 150px;
     height: 50px;
     background: none;
-    border: 2px solid var(--primary);
+    border: 1px solid var(--primary);
     border-radius: 2px;
     cursor: pointer;
 }
 
 .myBtn.open {
-    background: var(--primary);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    background: none;
     border-radius: 8px;
 }
 
 .myBtn.del {
-    background: #141414;
+    color: var(--text);
+    background-color: var(--background-ui-el);
     border: 1px solid var(--border-color);
     border-radius: 6px;
 }

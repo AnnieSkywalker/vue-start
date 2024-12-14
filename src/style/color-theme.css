@@ -74,7 +74,7 @@ body.lite {
     --primary:                 var(--teal);
     --background-color:        var(--white-color);
     --background-footer:       var(--teal-lighten-5);
-    --border-color:            var( --teal-lighten-4);
+    --border-color:            var(--teal-lighten-4);
     --hover:                   var(--teal-lighten-4);
 
     --background-ui-el:        var(--teal-lighten-5);
