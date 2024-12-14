@@ -66,7 +66,8 @@ body.dark {
     --text-lite:               var(--grey-colors-75);
     --text:                    var(--grey-colors-60);
 
-    --fill-svg-face:           var(--dark-colors-06);
+    --fill-svg-face:           var(--primary-color-60);
+    --fill-svg-eyes:           var(--dark-colors-10);
     --fill-svg-glasses:        var(--grey-colors-90);
 }
 
@@ -85,5 +86,6 @@ body.lite {
     --text:                    var(--teal-darken-2);
 
     --fill-svg-face:           var(--dark-colors-06);
+    --fill-svg-eyes:           var(--dark-colors-06);
     --fill-svg-glasses:        var(--teal-darken-4);
 }
