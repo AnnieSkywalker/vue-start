@@ -129,6 +129,12 @@ import MySocialBlock from './UI/MySocialBlock.vue';
     width: 120px;
 }
 
+@media screen and (max-width: 767px)  {
+    .profile__avatar-block {
+        margin: 0;
+    }
+}
+
 .profile__avatar {
     border-radius: 50%;
     box-sizing: border-box;
