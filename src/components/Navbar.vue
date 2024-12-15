@@ -3,7 +3,7 @@
         <div class='navbar__links'>
             <router-link class='navbar__link' to ='/posts'>posts</router-link>
             <router-link class='navbar__link' to ="/about">about</router-link>
-            <basic-toggle-switch :checkedValue='checked' @setCheckboxVal='getChecked'/>
+            <basic-toggle-switch v-model="checked"/>
         </div>
     </div>
 </template>
@@ -17,39 +17,31 @@ export default {
     data () {
         return {
             checked: true,
-            nameTheme: 'dark',
         }
     },
-    methods: {
-        getChecked (val) {
-            this.checked = val;
-            const el = document.body;
-
-            if(!val) {
-                el.classList.remove('dark');
-                el.classList.add('lite');
-                localStorage.setItem('nameTheme', 'lite');
-            } else {
-                el.classList.remove('lite');
-                el.classList.add('dark');
-                localStorage.setItem('nameTheme', 'dark');
-            }
-        }
+    watch: {
+        checked: {
+            handler(isChecked) {
+                const el = document.body;
+                if(!isChecked) {
+                    el.classList.remove('dark');
+                    el.classList.add('lite');
+                    localStorage.setItem('nameTheme', 'lite');
+                } else {
+                    el.classList.remove('lite');
+                    el.classList.add('dark');
+                    localStorage.setItem('nameTheme', 'dark');
+                }
+            },
+        },
     },
-    // mounted() {
-    //     console.log(localStorage.getItem('theme'))
-    //         let ls = localStorage.getItem('theme')
-    //         if (ls  === 'dark' || ls === null) {
-    //             return this.checkbox = true;
-    //         } else {
-    //             return this.checkbox = false;
-    //         }
-    // },
-    mounted() {
-        if (localStorage.nameTheme) {
-            this.nameTheme = localStorage.nameTheme;
+    mounted() { 
+        if (localStorage.nameTheme === 'dark' || localStorage.nameTheme === undefined) {
+            this.checked = true;
+        } else {
+            this.checked = false;
         }
-    },
+    }
 }
 </script>
 

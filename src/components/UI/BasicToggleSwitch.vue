@@ -1,6 +1,6 @@
 <template>
     <label class="switch">
-        <input type="checkbox" @click="toggleCheckbox">
+        <input type="checkbox" :checked='modelValue' @click="toggleCheckbox">
         <div class="slider round"></div>
     </label>
 </template>
@@ -8,21 +8,14 @@
 <script>
 export default {
     props: {
-        checkedValue: {
+        modelValue: {
             type: Boolean,
             required: true,
-            default: true,
-        }
-    },
-    data () {
-        return {
-            checkbox: this.checkedValue,
         }
     },
     methods: {
         toggleCheckbox() {
-            this.checkbox = !this.checkbox;
-            this.$emit('setCheckboxVal', this.checkbox)
+            this.$emit('update:modelValue', event.target.checked)
         },
     },
 }
