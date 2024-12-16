@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1>{{ $store.this.state.likes }}</h1>
         <section class="management">
             <my-button 
                 class='add' 
@@ -14,12 +13,14 @@
             </my-button>
 
             <my-input
-                v-model='searchQuery'
+                :model-value='searchQuery'
+                @update:modal-value="setSearchQuery"
                 placeholder='поиск...'
             ></my-input>
 
             <my-select 
-                v-model='selectedSort' 
+                :model-value='selectedSort' 
+                @update:modal-value="setSelectedSort"
                 :options='sortOptions'
             ></my-select>
         </section>
@@ -46,7 +47,7 @@
 <script>
 import PostForm from '@/components/PostForm.vue';
 import PostList from '@/components/PostList.vue';
-import axios from 'axios';
+import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
 
     export default {
         components: {
@@ -54,22 +55,20 @@ import axios from 'axios';
         },
         data () {
             return {
-                posts : [],
                 dialogVisible: false,
-                isPostsLoading: false,
-                selectedSort: '',
-                searchQuery: '',
-                page: 1,
-                limit: 10,
-                totalPage: 0,
                 iconName: 'plus',
-                sortOptions: [
-                    {value: 'title', name: 'по названию'},
-                    {value: 'body', name: 'по описанию'}
-                ]
             }
         },
         methods: {
+            ...mapMutations({
+                setPage: 'post/setPost',
+                setSearchQuery: 'post/setSearchQuery',
+                setSelectedSort: 'post/setSelectedSort'
+            }),
+            ...mapActions({
+                postsFetch: 'post/postsFetch'
+
+            }),
             createPost (post) {
                 this.posts.push(post);
                 this.dialogVisible = false;
@@ -80,39 +79,26 @@ import axios from 'axios';
             showVisible () {
                 this.dialogVisible = true;
             },
-            changePage (pageNumber) {
-                this.page = pageNumber;
-                this.postsFetch();
-            },
-            async postsFetch () {
-                try {
-                    this.isPostsLoading = true;
-                    let response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10', {
-                        params: {
-                            _page: this.page,
-                            _limit: this.limit,
-                        }
-                    });
-                    this.totalPage = Math.ceil(response.headers['x-total-count']/this.limit)
-                    this.posts = response.data;
-                } catch (e) {
-                    console.log(e);
-                }
-                finally {
-                    this.isPostsLoading = false;
-                }
-            }
+        },
+        computed: {
+            ...mapState({
+                posts : state => state.post.posts,
+                isPostsLoading: state => state.post.isPostsLoading,
+                selectedSort: state => state.post.selectedSort,
+                searchQuery: state => state.post.searchQuery,
+                page: state => state.post.page,
+                limit: state => state.post.limit,
+                totalPage: state => state.post.totalPage,
+                sortOptions: state => state.post.sortOptions,
+            }),
+            ...mapGetters({
+                sortedPost: 'post/sortedPost',
+                sortedAndSearchedPost: 'post/sortedAndSearchedPost'
+            })
+
         },
         mounted () {
             this.postsFetch();
-        },
-        computed: {
-            sortedPost () {
-                return [...this.posts].sort((post1, post2) => post1[this.selectedSort]?.localeCompare(post2[this.selectedSort]))
-            },
-            sortedAndSearchedPost () {
-                return this.sortedPost.filter(post => post.title.toLowerCase().includes(this.searchQuery.toLowerCase()))
-            }
         },
     }
 </script>

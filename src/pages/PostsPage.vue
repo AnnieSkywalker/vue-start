@@ -1,8 +1,8 @@
-<template>
+<!-- <template>
     <div>
         <section class="management">
             <my-button 
-                class='add' 
+                class='add'
                 @click='showVisible'
             >
                 <icon-base
@@ -123,4 +123,4 @@ import axios from 'axios';
     flex-direction: column;
     gap: 20px;
 }
-</style>
+</style> -->

@@ -2,6 +2,7 @@
     <form @submit.prevent>
         <my-input 
             v-model='post.title'
+            v-focus
             type="text" 
             placeholder='название'
             class='input__margin-bottom'
