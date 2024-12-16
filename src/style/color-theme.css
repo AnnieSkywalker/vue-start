@@ -52,7 +52,7 @@
     --teal-accent-4: #00BFA5;
 }
 
-body.dark {
+:root.dark {
     --primary:                 var(--primary-color-60);
     --background-color:        var(--dark-colors-12);
     --background-footer:       var(--dark-colors-10);
@@ -71,7 +71,7 @@ body.dark {
     --fill-svg-glasses:        var(--grey-colors-90);
 }
 
-body.lite {
+:root.lite {
     --primary:                 var(--teal);
     --background-color:        var(--white-color);
     --background-footer:       var(--teal-lighten-5);

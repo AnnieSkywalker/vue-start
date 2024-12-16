@@ -1,7 +1,7 @@
 <template>
     <header id='header' class='header'>
         <div class="header__content">
-            <my-logo @click='$router.push("/")'></my-logo>
+            <my-logo @click='$router.push("/store")'></my-logo>
             <app-navbar></app-navbar>
         </div>
     </header>

@@ -9,39 +9,18 @@
 </template>
 
 <script>
+import ThemeToggle from '@/mixins/ThemeToggle';
 import BasicToggleSwitch from './UI/BasicToggleSwitch.vue';
 export default {
     components: {
         BasicToggleSwitch,
     },
+    mixins: [ThemeToggle],
     data () {
         return {
-            checked: true,
+            checked: "",
         }
     },
-    watch: {
-        checked: {
-            handler(isChecked) {
-                const el = document.body;
-                if(!isChecked) {
-                    el.classList.remove('dark');
-                    el.classList.add('lite');
-                    localStorage.setItem('nameTheme', 'lite');
-                } else {
-                    el.classList.remove('lite');
-                    el.classList.add('dark');
-                    localStorage.setItem('nameTheme', 'dark');
-                }
-            },
-        },
-    },
-    mounted() { 
-        if (localStorage.nameTheme === 'dark' || localStorage.nameTheme === undefined) {
-            this.checked = true;
-        } else {
-            this.checked = false;
-        }
-    }
 }
 </script>
 
