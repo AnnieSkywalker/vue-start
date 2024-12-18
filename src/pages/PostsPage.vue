@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
     <div>
         <section class="management">
             <my-button 
@@ -123,4 +123,4 @@ import axios from 'axios';
     flex-direction: column;
     gap: 20px;
 }
-</style> -->
+</style>

@@ -1,8 +1,7 @@
 import axios from "axios";
 
 export const postModule = {
-    state: function () {
-        return {
+    state: () => ({
             posts : [],
             isPostsLoading: false,
             selectedSort: '',
@@ -14,8 +13,7 @@ export const postModule = {
                 {value: 'title', name: 'по названию'},
                 {value: 'body', name: 'по описанию'}
             ]
-        }
-    },
+    }),
     getters: {
         sortedPost (state) {
             return [...state.posts].sort((post1, post2) => post1[state.selectedSort]?.localeCompare(post2[state.selectedSort]))
@@ -48,20 +46,20 @@ export const postModule = {
         async postsFetch (context) {
             console.log(context)
             try {
-                context.commit('setLoading', true);
+                context.commit('setLoading', true, {root: true});
                 let response = await axios.get('https://jsonplaceholder.typicode.com/posts?_limit=10', {
                     params: {
                         _page: context.state.page,
                         _limit: context.state.limit,
                     }
                 });
-                context.commit('setTotalPage', Math.ceil(response.headers['x-total-count']/context.state.limit))
-                context.commit('setPosts', response.data);
+                context.commit('setTotalPage', Math.ceil(response.headers['x-total-count']/context.state.limit), {root: true})
+                context.commit('setPosts', response.data, {root: true});
             } catch (e) {
                 console.log(e);
             }
             finally {
-                context.commit('setLoading', false);
+                context.commit('setLoading', false, {root: true});
             }
         }
     },

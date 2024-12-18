@@ -1,6 +1,7 @@
 <template>
     <div class='navbar'>
         <div class='navbar__links'>
+            <router-link class='navbar__link' to ='/page-vk'>VK</router-link>
             <router-link class='navbar__link' to ='/posts'>posts</router-link>
             <router-link class='navbar__link' to ="/about">about</router-link>
             <basic-toggle-switch v-model="checked"/>
