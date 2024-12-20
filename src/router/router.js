@@ -23,10 +23,6 @@ const routes = [
         component: PostPage,
     },
     {
-        path: '/store',
-        component: PostsPageWithStore,
-    },
-    {
         path: '/page-vk',
         component: VkPage,
     }

@@ -13,13 +13,13 @@
 
             <my-input
                 :model-value='searchQuery'
-                @update:modal-value="setSearchQuery"
+                @update:modelValue="setSearchQuery"
                 placeholder='поиск...'
             ></my-input>
 
             <my-select 
                 :model-value='selectedSort' 
-                @update:modal-value="setSelectedSort"
+                @update:modelValue="setSelectedSort"
                 :options='sortOptions'
             ></my-select>
         </section>
@@ -77,6 +77,10 @@ import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
             },
             showVisible () {
                 this.dialogVisible = true;
+            },
+            changePage (pageNumber) {
+                this.page = pageNumber;
+                this.postsFetch();
             },
         },
         mounted () {
