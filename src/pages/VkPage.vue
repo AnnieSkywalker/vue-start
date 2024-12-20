@@ -48,10 +48,8 @@ import ListFriendsVk from '@/components/ListFriendsVk.vue';
                     .catch(e => console.log('logout тут такая сякая ошибка' + e));
             },
             getUser (response) {
-                console.log(response)
                 this.userData = response.user;
                 this.isAuth = true;
-                console.log(this.userData);
                 this.ViewFriends();
             },
             receivingAccess (data) {
@@ -74,7 +72,6 @@ import ListFriendsVk from '@/components/ListFriendsVk.vue';
                         v: this.vkidVersion,
                         fields: this.fields,
                     })
-                        console.log(result)
                         this.friendsUser = result.response.items;
                 } catch(e) {
                     console.log(e)
