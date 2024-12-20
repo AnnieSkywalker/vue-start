@@ -36,8 +36,8 @@
 </script>
 
 <style lang="css" scoped>
-
 .profile-vk {
+    padding: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +46,6 @@
 
 @media screen and (max-width: 767px)  {
     .profile-vk {
-        padding-top: 15px;
         grid-template-columns: 100%;
         grid-template-rows: max-content;
         column-gap: 0;
@@ -84,6 +83,7 @@
     font-size: 24px;
     color: var(--text-title);
 }
+
 .profile-vk__id {
     font-size: 11px;
     line-height: 150%;
