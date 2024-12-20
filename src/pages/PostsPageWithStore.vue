@@ -3,8 +3,7 @@
         <section class="management">
             <my-button 
                 class='add' 
-                @click='showVisible'
-            >
+                @click='showVisible'>
                 <icon-base
                     :width=22
                     :height=22
@@ -80,6 +79,9 @@ import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
                 this.dialogVisible = true;
             },
         },
+        mounted () {
+            this.postsFetch();
+        },
         computed: {
             ...mapState({
                 posts : state => state.post.posts,
@@ -95,10 +97,6 @@ import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
                 sortedPost: 'post/sortedPost',
                 sortedAndSearchedPost: 'post/sortedAndSearchedPost'
             })
-
-        },
-        mounted () {
-            this.postsFetch();
         },
     }
 </script>

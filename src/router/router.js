@@ -1,4 +1,4 @@
-import PostsPage from "@/pages/PostsPage.vue";
+// import PostsPage from "@/pages/PostsPage.vue";
 import About from "@/pages/About.vue";
 import PostPage from "@/pages/PostPage.vue";
 import VkPage from "@/pages/VkPage.vue";
@@ -8,11 +8,11 @@ import PostsPageWithStore from "@/pages/PostsPageWithStore.vue";
 const routes = [
     {
         path: '/',
-        component: PostsPage,
+        component: PostsPageWithStore,
     },
     {
         path: '/posts',
-        component: PostsPage,
+        component: PostsPageWithStore,
     },
     {
         path: '/about',
