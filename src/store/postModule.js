@@ -20,7 +20,7 @@ export const postModule = {
         },
         sortedAndSearchedPost (state, getters) {
             return getters.sortedPost.filter(post => post.title.toLowerCase().includes(state.searchQuery.toLowerCase()))
-        }
+        },
     },
     mutations: {
         setPosts(state, posts) {
@@ -61,6 +61,7 @@ export const postModule = {
                 context.commit('setLoading', false);
             }
         }
+
     },
     namespaced: true
 }

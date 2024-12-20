@@ -60,13 +60,12 @@ import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
         },
         methods: {
             ...mapMutations({
-                setPage: 'post/setPost',
+                setPage: 'post/setPage',
                 setSearchQuery: 'post/setSearchQuery',
                 setSelectedSort: 'post/setSelectedSort'
             }),
             ...mapActions({
                 postsFetch: 'post/postsFetch'
-
             }),
             createPost (post) {
                 this.posts.push(post);
@@ -78,10 +77,10 @@ import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
             showVisible () {
                 this.dialogVisible = true;
             },
-            changePage (pageNumber) {
-                this.page = pageNumber;
+            changePage (page) {
+                this.setPage(page)
                 this.postsFetch();
-            },
+            }
         },
         mounted () {
             this.postsFetch();
@@ -99,7 +98,7 @@ import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
             }),
             ...mapGetters({
                 sortedPost: 'post/sortedPost',
-                sortedAndSearchedPost: 'post/sortedAndSearchedPost'
+                sortedAndSearchedPost: 'post/sortedAndSearchedPost',
             })
         },
     }
