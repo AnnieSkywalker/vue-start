@@ -82,7 +82,7 @@ import ListFriendsVk from '@/components/ListFriendsVk.vue';
         mounted () {
             VKID.Config.set({
                 app: 52858991, 
-                redirectUrl: (window.location.host === 'localhost') ? `http://localhost/page-vk` : 'https://spirridonovka-pet-project.ru/',
+                redirectUrl: `http://localhost/page-vk`,
                 responseMode: VKID.ConfigResponseMode.Callback,
             })
             const oneTap = new VKID.OneTap();
@@ -92,7 +92,6 @@ import ListFriendsVk from '@/components/ListFriendsVk.vue';
             oneTap.render({ container: container, scheme: VKID.Scheme.DARK, lang: VKID.Languages.RUS })
                 .on(VKID.WidgetEvents.ERROR, e => console.log(e))
                 .on(VKID.OneTapInternalEvents.LOGIN_SUCCESS,  (payload) => {
-                    console.log(payload)
                     const code = payload.code;
                     const deviceId = payload.device_id;
                     VKID.Auth.exchangeCode(code, deviceId)
