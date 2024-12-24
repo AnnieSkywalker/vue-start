@@ -81,7 +81,7 @@ import ListFriendsVk from '@/components/ListFriendsVk.vue';
         },
         mounted () {
             VKID.Config.set({
-                app: 52858991, 
+                app: 52858991,
                 redirectUrl: (window.location.host === 'localhost') ? `http://localhost/page-vk` : 'https://spirridonovka-pet-project.ru/page-vk',
                 responseMode: VKID.ConfigResponseMode.Callback,
             })

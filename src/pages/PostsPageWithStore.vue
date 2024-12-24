@@ -37,7 +37,7 @@
 
         <my-pagination
             :totalPage='totalPage'
-            :page='page'
+            :page='page'проблема с подключением
             @changePage='changePage'
         ></my-pagination>
     </div>
@@ -60,6 +60,7 @@ import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
         },
         methods: {
             ...mapMutations({
+                setPosts: 'post/setPosts',
                 setPage: 'post/setPage',
                 setSearchQuery: 'post/setSearchQuery',
                 setSelectedSort: 'post/setSelectedSort'
@@ -73,6 +74,7 @@ import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
             },
             removePost (post) {
                 this.posts = this.posts.filter(p => p.id !== post.id)
+                this.setPosts(this.posts);
             },
             showVisible () {
                 this.dialogVisible = true;
