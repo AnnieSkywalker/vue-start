@@ -8,20 +8,32 @@
     </div>
 </template>
 
-<script>
-import ThemeToggle from '@/mixins/ThemeToggle';
+<script setup>
+import { ref, onMounted, watch } from 'vue';
 import BasicToggleSwitch from './UI/BasicToggleSwitch.vue';
-export default {
-    components: {
-        BasicToggleSwitch,
-    },
-    mixins: [ThemeToggle],
-    data () {
-        return {
-            checked: "",
+
+    let checked = ref('');
+
+    onMounted (() => {
+        if (localStorage.nameTheme === 'dark' || localStorage.nameTheme === undefined) {
+            checked.value = true;
+        } else {
+            checked.value = false;
         }
-    },
-}
+    })
+
+    watch (checked, (isChecked) => {
+        const el = document.documentElement;
+        if(!isChecked) {
+            el.classList.remove('dark');
+            el.classList.add('lite');
+            localStorage.setItem('nameTheme', 'lite');
+        } else {
+            el.classList.remove('lite');
+            el.classList.add('dark');
+            localStorage.setItem('nameTheme', 'dark');
+        }
+    })
 </script>
 
 <style lang="css" scoped>
