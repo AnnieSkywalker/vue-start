@@ -23,14 +23,13 @@
 </template>
 
 <script>
-    export default {
-        name: 'list-friends-vk',
-        props: {
-            friends: {
-                type: Array
-            }
-        }
-    }
+export default {
+    name: 'list-friends-vk',
+}
+</script>
+
+<script setup>
+const { friends } = defineProps({ friends: Array });
 </script>
 
 <style lang="css" scoped>
