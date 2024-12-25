@@ -8,24 +8,24 @@
 </template>
 
 <script>
-    export default {
-        name: 'app-footer',
-        data() {
-            return {
-                date: 0
-            }
-        },
-        methods: {
-            getDate() {
-                let xmas = new Date();
-                this.date = xmas.getFullYear()
-            }
-        },
-        mounted () {
-            this.getDate();
-        }
-        
+export default {
+    name: 'app-footer',
+}
+</script>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+
+    const date = ref(0);
+
+    function getDate() {
+        let xmas = new Date();
+        date.value = xmas.getFullYear();
     }
+
+    onMounted(() => {
+        getDate();
+    })
 </script>
 
 <style lang="css" scoped>
