@@ -46,7 +46,7 @@
 <script>
 import PostForm from '@/components/PostForm.vue';
 import PostList from '@/components/PostList.vue';
-import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
+import { mapActions, mapGetters, mapMutations, mapState } from "vuex";
 
     export default {
         components: {
@@ -66,15 +66,14 @@ import {mapActions, mapState, mapGetters, mapMutations} from "vuex";
                 setSelectedSort: 'post/setSelectedSort'
             }),
             ...mapActions({
-                postsFetch: 'post/postsFetch'
+                postsFetch: 'post/postsFetch',
             }),
             createPost (post) {
                 this.posts.push(post);
                 this.dialogVisible = false;
             },
             removePost (post) {
-                this.posts = this.posts.filter(p => p.id !== post.id)
-                this.setPosts(this.posts);
+                this.$store.dispatch('post/removePost', post);
             },
             showVisible () {
                 this.dialogVisible = true;

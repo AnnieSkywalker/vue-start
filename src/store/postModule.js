@@ -24,8 +24,6 @@ export const postModule = {
     },
     mutations: {
         setPosts(state, posts) {
-            console.log(state)
-            console.log(posts)
             state.posts = posts;
         },
         setLoading(state, bool) {
@@ -62,8 +60,10 @@ export const postModule = {
             finally {
                 context.commit('setLoading', false);
             }
+        },
+        removePost (context, payload) {
+            context.commit('setPosts', context.state.posts.filter(p => p.id !== payload.id));
         }
-
     },
     namespaced: true
 }
