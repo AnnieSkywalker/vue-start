@@ -8,19 +8,16 @@
 </template>
 
 <script>
-import AppNavbar from './Navbar.vue'
+export default {
+    name: 'app-header',
+}
+</script>
 
-    export default {
-        name: 'app-header',
-        components: {
-            AppNavbar
-        }
-    }
+<script setup>
+import AppNavbar from './Navbar.vue'
 </script>
 
 <style lang="css" scoped>
-#glasses
-
 .header {
     padding: 25px 19px 0;
     width: 100%;
