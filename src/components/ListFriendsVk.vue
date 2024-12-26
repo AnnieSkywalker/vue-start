@@ -1,21 +1,25 @@
 <template>
     <section class="friends">
-        <ul class='friends__list'>
-            <li v-for='user in friends' class='friends__item'>
-                <div class='friends__container'>
-                    <img class='friends__image' :src='user.photo_200_orig' alt="imag">
-                    <div class='friends__full-name-block'>
-                        <span class='friends__first-name' >
+        <ul class="friends__list">
+            <li v-for="user in friends" class="friends__item">
+                <div class="friends__container">
+                    <img
+                        class="friends__image"
+                        :src="user.photo_200_orig"
+                        alt="imag"
+                    />
+                    <div class="friends__full-name-block">
+                        <span class="friends__first-name">
                             {{ user.first_name }}
                         </span>
-                        <span class='friends__last-name'>
-                            {{user.last_name}}
+                        <span class="friends__last-name">
+                            {{ user.last_name }}
                         </span>
                     </div>
                 </div>
-                <div class='friends__button'>
-                    <my-button class='open'>добавить</my-button>
-                    <my-button class='del'>удалить</my-button>
+                <div class="friends__button">
+                    <my-button class="open">добавить</my-button>
+                    <my-button class="del">удалить</my-button>
                 </div>
             </li>
         </ul>
@@ -25,11 +29,16 @@
 <script>
 export default {
     name: 'list-friends-vk',
-}
+};
 </script>
 
 <script setup>
 const { friends } = defineProps({ friends: Array });
+
+const foo = () => {
+    fsdafda;
+    fddsaf;
+};
 </script>
 
 <style lang="css" scoped>
@@ -56,8 +65,8 @@ const { friends } = defineProps({ friends: Array });
     cursor: pointer;
     box-sizing: border-box;
 }
-@media screen and (max-width: 767px)  {
-    .friends__item  {
+@media screen and (max-width: 767px) {
+    .friends__item {
         flex-direction: column;
         gap: 20px;
         align-items: center;
@@ -74,8 +83,8 @@ const { friends } = defineProps({ friends: Array });
     flex-direction: row;
     align-items: center;
 }
-@media screen and (max-width: 767px)  {
-    .friends__container  {
+@media screen and (max-width: 767px) {
+    .friends__container {
         flex-direction: column;
         gap: 10px;
         justify-content: center;
@@ -95,30 +104,29 @@ const { friends } = defineProps({ friends: Array });
 .friends__full-name-block {
     display: flex;
     flex-direction: row;
-
 }
 
 .friends__first-name {
     display: block;
     font-size: 15px;
-    color: var(--text)
+    color: var(--text);
 }
 
 .friends__full-name-block {
     display: flex;
-    gap: 10px
+    gap: 10px;
 }
 
 .friends__last-name {
     display: block;
     font-size: 15px;
-    color: var(--text)
+    color: var(--text);
 }
 
 .friends__button {
     width: 300px;
     display: flex;
     flex-direction: row;
-    gap:5px
+    gap: 5px;
 }
 </style>
