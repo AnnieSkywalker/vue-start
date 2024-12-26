@@ -1,20 +1,21 @@
 <template>
-    <footer id='footer' class='footer'>
+    <footer id="footer" class="footer">
         <div class="footer__container">
             <p class="footer__copyright">© {{ date }} Pet-Project</p>
-            <p class="footer__discription">Пет-проект (pet — англ. «домашний питомец, любимец») — это проект, который разработчик делает для себя, в свободное от основной работы время. Это отличный способ попробовать новые технологии, развить свои навыки и просто убить время. Страницы в разработке <span @click='$router.push("/page-vk")'>page-vk</span></p>
+            <p class="footer__discription">
+                Пет-проект (pet — англ. «домашний питомец, любимец») — это
+                проект, который разработчик делает для себя, в свободное от
+                основной работы время. Это отличный способ попробовать новые
+                технологии, развить свои навыки и просто убить время. Страницы в
+                разработке
+                <span @click="$router.push('/page-vk')">page-vk</span>
+            </p>
         </div>
     </footer>
 </template>
 
-<script>
-export default {
-    name: 'app-footer',
-}
-</script>
-
 <script setup>
-import { ref, onMounted } from 'vue';
+    import { onMounted, ref } from 'vue';
 
     const date = ref(0);
 
@@ -25,7 +26,7 @@ import { ref, onMounted } from 'vue';
 
     onMounted(() => {
         getDate();
-    })
+    });
 </script>
 
 <style lang="css" scoped>
@@ -49,7 +50,7 @@ import { ref, onMounted } from 'vue';
         line-height: 150%;
         color: var(--text-title);
     }
-    @media screen and (max-width: 767px)  {
+    @media screen and (max-width: 767px) {
         .footer__copyright {
             padding: 48px 0 36px;
             font-size: 14px;
