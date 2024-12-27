@@ -16,7 +16,7 @@
 <script setup>
     import { defineEmits, defineProps } from 'vue';
 
-    const props = defineProps(['modelValue']);
+    const { modelValue } = defineProps(['modelValue']);
     const emit = defineEmits(['update:modelValue']);
 
     const updateInput = event => {
