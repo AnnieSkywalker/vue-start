@@ -17,7 +17,7 @@
 
 <script setup>
     import axios from 'axios';
-    import { onMounted, ref, reactive } from 'vue';
+    import { onMounted, ref } from 'vue';
 
     let postId = ref('');
     let title = ref('');
