@@ -1,10 +1,10 @@
 <template>
     <div class="pagination">
-        <span 
+        <span
             class="pagination__page"
-            v-for="pageNumber in totalPage" 
+            v-for="pageNumber in totalPage"
             :key="pageNumber"
-            :class="{'pagination__page_current': page === pageNumber}"
+            :class="{ pagination__page_current: page === pageNumber }"
             @click="$emit('changePage', pageNumber)"
         >
             {{ pageNumber }}
@@ -14,19 +14,23 @@
 
 <script>
     export default {
-        name: "my-pagination",
-        props: {
-            totalPage: {
-                type: Number,
-                required: true,
-                default: 1,
-            },
-            page: {
-                type: Number,
-                required: true,
-            }
-        }
-    }
+        name: 'my-pagination',
+    };
+</script>
+<script setup>
+    import { defineProps } from 'vue';
+
+    const { totalPage, page } = defineProps({
+        totalPage: {
+            type: Number,
+            required: true,
+            default: 1,
+        },
+        page: {
+            type: Number,
+            required: true,
+        },
+    });
 </script>
 
 <style lang="css" scoped>
