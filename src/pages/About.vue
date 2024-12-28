@@ -9,17 +9,9 @@
     </div>
 </template>
 
-<script>
+<script setup>
     import Profile from '@/components/Profile.vue';
     import ProjectDescription from '@/components/ProjectDescription.vue';
-
-    export default {
-        name: 'About',
-        components: {
-            ProjectDescription,
-            Profile,
-        },
-    };
 </script>
 
 <style lang="css" scoped>
