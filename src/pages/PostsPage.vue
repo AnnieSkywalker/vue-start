@@ -40,21 +40,17 @@
 
 <script setup>
     import PostForm from '@/components/PostForm.vue';
-import PostList from '@/components/PostList.vue';
-import { computed, onMounted, ref } from 'vue';
-import { useStore } from 'vuex';
+    import PostList from '@/components/PostList.vue';
+    import { computed, onMounted, ref } from 'vue';
+    import { useStore } from 'vuex';
 
     let dialogVisible = ref(false);
     const iconName = 'plus';
     const store = useStore();
 
-    function postsFetch() {
-        return store.dispatch('posts/postsFetch');
-    }
+    const postsFetch = () => store.dispatch('posts/postsFetch');
 
-    onMounted(() => {
-        postsFetch();
-    });
+    onMounted(() => postsFetch());
 
     const posts = computed(() => store.state.posts.posts);
     const isPostsLoading = computed(() => store.state.posts.isPostsLoading);
@@ -66,12 +62,16 @@ import { useStore } from 'vuex';
     const sortOptions = computed(() => store.state.posts.sortOptions);
 
     const sortedPost = computed(() => store.getters['posts/sortedPost']);
-    const sortedAndSearchedPost = computed(() => store.getters['posts/sortedAndSearchedPost']);
+    const sortedAndSearchedPost = computed(
+        () => store.getters['posts/sortedAndSearchedPost'],
+    );
 
-    const setPage = () => store.commit('posts/setPage');
-    const setPosts = () => store.commit('posts/setPosts');
-    const setSearchQuery = () => store.commit('posts/setSearchQuery');
-    const setSelectedSort = () => store.commit('posts/setSelectedSort');
+    const setPage = payload => store.commit('posts/setPage', payload);
+    const setPosts = payload => store.commit('posts/setPosts', payload);
+    const setSearchQuery = payload =>
+        store.commit('posts/setSearchQuery', payload);
+    const setSelectedSort = payload =>
+        store.commit('posts/setSelectedSort', payload);
 
     function createPost(post) {
         posts.value.push(post);

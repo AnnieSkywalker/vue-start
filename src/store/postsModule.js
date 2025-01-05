@@ -17,15 +17,16 @@ export const postsModule = {
     getters: {
         sortedPost(state) {
             return [...state.posts].sort((post1, post2) => {
-                console.log(post1)
-                console.log(post2)
-                return post1[state.selectedSort]?.localeCompare(post2[state.selectedSort]);
+                return post1[state.selectedSort]?.localeCompare(
+                    post2[state.selectedSort],
+                );
             });
         },
         sortedAndSearchedPost(state, getters) {
-            return getters.sortedPost.filter(post => {
-                console.log(post)
-                return post.title.toLowerCase().includes(state.searchQuery.toLowerCase())
+            return getters.sortedPost.filter((post) => {
+                return post.title
+                    .toLowerCase()
+                    .includes(state.searchQuery.toLowerCase());
             });
         },
     },
@@ -37,7 +38,6 @@ export const postsModule = {
             state.isPostsLoading = bool;
         },
         setPage(state, page) {
-            console.log(page);
             state.page = page;
         },
         setSelectedSort(state, selectedSort) {
@@ -54,6 +54,7 @@ export const postsModule = {
     },
     actions: {
         async postsFetch(context) {
+            console.log(context);
             try {
                 context.commit('setLoading', true);
                 let response = await axios.get(
@@ -81,7 +82,7 @@ export const postsModule = {
         removePost(context, payload) {
             context.commit(
                 'setPosts',
-                context.state.posts.filter(p => p.id !== payload.id),
+                context.state.posts.filter((p) => p.id !== payload.id),
             );
         },
     },
