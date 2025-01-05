@@ -2,11 +2,13 @@
     "singleQuote": true,
     "semi": true,
     "bracketSpacing": true,
-    "arrowParens": "avoid",
     "vueIndentScriptAndStyle": true,
-    "brackedSameLine": false,
     "tabWidth": 4,
     "useTabs": false,
-    "trailingComma": "all",
+    "trailing Comma": "all",
     "endOfLine": "lf"
 }
+
+// "arrowParens": "avoid",
+
+// "brackedSameLine": false,

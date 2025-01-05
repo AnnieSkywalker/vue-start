@@ -1,15 +1,15 @@
-// import PostsPage from "@/pages/PostsPage.vue";
-import About from "@/pages/About.vue";
-import PostPage from "@/pages/PostPage.vue";
-import VkPage from "@/pages/VkPage.vue";
-import { createRouter, createWebHistory } from "vue-router"
-import PostsPageWithStore from "@/pages/PostsPageWithStore.vue";
-import Login from "@/pages/Login.vue"
+import About from '@/pages/About.vue';
+import Login from '@/pages/Login.vue';
+import PostPage from '@/pages/PostPage.vue';
+import PostsPage from '@/pages/PostsPage.vue';
+import PostsPageWithStore from '@/pages/PostsPageWithStore.vue';
+import VkPage from '@/pages/VkPage.vue';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
     {
         path: '/',
-        component: PostsPageWithStore,
+        component: PostsPage,
     },
     {
         path: '/login',
@@ -17,7 +17,7 @@ const routes = [
     },
     {
         path: '/posts',
-        component: PostsPageWithStore,
+        component: PostsPage,
     },
     {
         path: '/about',
@@ -30,12 +30,12 @@ const routes = [
     {
         path: '/page-vk',
         component: VkPage,
-    }
-]
+    },
+];
 
 const router = createRouter({
     routes,
-    history: createWebHistory(process.env.BASE_URL)
-})
+    history: createWebHistory(process.env.BASE_URL),
+});
 
 export default router;
