@@ -17,16 +17,12 @@ export const postsModule = {
     getters: {
         sortedPost(state) {
             return [...state.posts].sort((post1, post2) => {
-                return post1[state.selectedSort]?.localeCompare(
-                    post2[state.selectedSort],
-                );
+                return post1[state.selectedSort]?.localeCompare(post2[state.selectedSort]);
             });
         },
         sortedAndSearchedPost(state, getters) {
-            return getters.sortedPost.filter((post) => {
-                return post.title
-                    .toLowerCase()
-                    .includes(state.searchQuery.toLowerCase());
+            return getters.sortedPost.filter(post => {
+                return post.title.toLowerCase().includes(state.searchQuery.toLowerCase());
             });
         },
     },
@@ -41,7 +37,6 @@ export const postsModule = {
             state.page = page;
         },
         setSelectedSort(state, selectedSort) {
-            console.log(selectedSort);
             state.selectedSort = selectedSort;
         },
         setTotalPage(state, totalPage) {
@@ -54,24 +49,15 @@ export const postsModule = {
     },
     actions: {
         async postsFetch(context) {
-            console.log(context);
             try {
                 context.commit('setLoading', true);
-                let response = await axios.get(
-                    'https://jsonplaceholder.typicode.com/posts',
-                    {
-                        params: {
-                            _page: context.state.page,
-                            _limit: context.state.limit,
-                        },
+                let response = await axios.get('https://jsonplaceholder.typicode.com/posts', {
+                    params: {
+                        _page: context.state.page,
+                        _limit: context.state.limit,
                     },
-                );
-                context.commit(
-                    'setTotalPage',
-                    Math.ceil(
-                        response.headers['x-total-count'] / context.state.limit,
-                    ),
-                );
+                });
+                context.commit('setTotalPage', Math.ceil(response.headers['x-total-count'] / context.state.limit));
                 context.commit('setPosts', response.data);
             } catch (e) {
                 console.log(e);
@@ -82,7 +68,7 @@ export const postsModule = {
         removePost(context, payload) {
             context.commit(
                 'setPosts',
-                context.state.posts.filter((p) => p.id !== payload.id),
+                context.state.posts.filter(p => p.id !== payload.id),
             );
         },
     },

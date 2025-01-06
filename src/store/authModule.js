@@ -3,8 +3,8 @@ export const authModule = {
         isAuth: true,
     }),
     mutations: {
-        setIsAuth (state, bool) {
+        setIsAuth(state, bool) {
             state.isAuth = bool;
-        }
+        },
     },
-}
+};
