@@ -4,9 +4,11 @@
     "bracketSpacing": true,
     "arrowParens": "avoid",
     "vueIndentScriptAndStyle": true,
+    "singleAttributePerLine": true,
     "brackedSameLine": false,
     "tabWidth": 4,
     "useTabs": false,
     "trailing Comma": "all",
-    "endOfLine": "lf"
+    "endOfLine": "lf",
+    "printWidth": 200
 }

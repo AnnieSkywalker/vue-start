@@ -1,7 +1,10 @@
 <template>
     <div class="post-page">
         <h2 class="post-page__id">Пост {{ postId = $route.params.id }}</h2>
-        <div class="post" v-if="!isPostLoading">
+        <div
+            class="post"
+            v-if="!isPostLoading"
+        >
             <div class="post__content">
                 <div class="post__wrap">
                     <h3 class="post-page__title post__title">
@@ -27,9 +30,7 @@
     onMounted(async () => {
         try {
             isPostLoading.value = true;
-            let response = await axios.get(
-                'https://jsonplaceholder.typicode.com/posts/' + postId.value,
-            );
+            let response = await axios.get('https://jsonplaceholder.typicode.com/posts/' + postId.value);
             title.value = response.data.title;
             body.value = response.data.body;
         } catch (e) {

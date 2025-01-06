@@ -1,8 +1,15 @@
 <template>
     <div>
         <section class="management">
-            <my-button class="add" @click="showVisible">
-                <icon-base :width="22" :height="22" :iconName="iconName">
+            <my-button
+                class="add"
+                @click="showVisible"
+            >
+                <icon-base
+                    :width="22"
+                    :height="22"
+                    :iconName="iconName"
+                >
                 </icon-base>
             </my-button>
 
@@ -62,16 +69,12 @@
     const sortOptions = computed(() => store.state.posts.sortOptions);
 
     const sortedPost = computed(() => store.getters['posts/sortedPost']);
-    const sortedAndSearchedPost = computed(
-        () => store.getters['posts/sortedAndSearchedPost'],
-    );
+    const sortedAndSearchedPost = computed(() => store.getters['posts/sortedAndSearchedPost']);
 
     const setPage = payload => store.commit('posts/setPage', payload);
     const setPosts = payload => store.commit('posts/setPosts', payload);
-    const setSearchQuery = payload =>
-        store.commit('posts/setSearchQuery', payload);
-    const setSelectedSort = payload =>
-        store.commit('posts/setSelectedSort', payload);
+    const setSearchQuery = payload => store.commit('posts/setSearchQuery', payload);
+    const setSelectedSort = payload => store.commit('posts/setSelectedSort', payload);
 
     function createPost(post) {
         posts.value.push(post);
