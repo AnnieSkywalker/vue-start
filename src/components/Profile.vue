@@ -9,14 +9,8 @@
                 />
             </div>
             <div class="profile__description">
-                <h2 class="section-title profile__section-title">
-                    Привет, меня зовут Андрей
-                </h2>
-                <p class="profile__text">
-                    Я Frontend-разработчик. Занимаюсь веб-разработкой с 2019
-                    года. Более подробно обо мне можно узнать перейдя по
-                    ссылкам.
-                </p>
+                <h2 class="section-title profile__section-title">Привет, меня зовут Андрей</h2>
+                <p class="profile__text">Я Frontend-разработчик. Занимаюсь веб-разработкой с 2019 года. Более подробно обо мне можно узнать перейдя по ссылкам.</p>
             </div>
         </div>
         <div className="profile__links">

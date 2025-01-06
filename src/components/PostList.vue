@@ -12,7 +12,12 @@
                 ></PostsItem>
             </TransitionGroup>
         </div>
-        <h2 v-else class="section-title">Посты не найдены!</h2>
+        <h2
+            v-else
+            class="section-title"
+        >
+            Посты не найдены!
+        </h2>
     </section>
 </template>
 

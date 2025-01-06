@@ -1,6 +1,15 @@
 <template>
-    <select class="MySelect" :value="modelValue" @change="changeOptions">
-        <option disabled value="">Сортировка</option>
+    <select
+        class="MySelect"
+        :value="modelValue"
+        @change="changeOptions"
+    >
+        <option
+            disabled
+            value=""
+        >
+            Сортировка
+        </option>
         <option
             v-for="option in options"
             :key="option.value"
@@ -17,7 +26,7 @@
     };
 </script>
 <script setup>
-    import { defineProps, defineEmits } from 'vue';
+    import { defineEmits, defineProps } from 'vue';
 
     const { modelValue, options } = defineProps({
         modelValue: {

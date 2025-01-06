@@ -8,10 +8,14 @@
             </div>
         </div>
         <div class="post__btn">
-            <my-button class="open" @click="$router.push(`/posts/${post.id}`)"
+            <my-button
+                class="open"
+                @click="$router.push(`/posts/${post.id}`)"
                 >Открыть</my-button
             >
-            <my-button class="del" @click="$emit('remove', post)"
+            <my-button
+                class="del"
+                @click="$emit('remove', post)"
                 >Удалить</my-button
             >
         </div>

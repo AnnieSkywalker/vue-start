@@ -1,7 +1,11 @@
 <template>
     <section class="profile-vk">
         <div class="profile-vk__avatar-block">
-            <img class="profile-vk__avatar" :src="href" alt="imag" />
+            <img
+                class="profile-vk__avatar"
+                :src="href"
+                alt="imag"
+            />
         </div>
         <span class="profile-vk__id">{{ userId }}</span>
         <div class="profile-vk__full-name-block">

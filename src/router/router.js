@@ -2,7 +2,6 @@ import About from '@/pages/About.vue';
 import Login from '@/pages/Login.vue';
 import PostPage from '@/pages/PostPage.vue';
 import PostsPage from '@/pages/PostsPage.vue';
-import PostsPageWithStore from '@/pages/PostsPageWithStore.vue';
 import VkPage from '@/pages/VkPage.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 

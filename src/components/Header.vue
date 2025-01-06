@@ -1,5 +1,8 @@
 <template>
-    <header id="header" class="header">
+    <header
+        id="header"
+        class="header"
+    >
         <div class="header__content">
             <my-logo @click="$router.push('/')"></my-logo>
             <app-navbar></app-navbar>

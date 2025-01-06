@@ -13,8 +13,15 @@
             placeholder="описание"
             class="input__margin-bottom"
         />
-        <my-button class="add" @click="createPost">
-            <icon-base :width="22" :height="22" :iconName="iconName">
+        <my-button
+            class="add"
+            @click="createPost"
+        >
+            <icon-base
+                :width="22"
+                :height="22"
+                :iconName="iconName"
+            >
             </icon-base>
         </my-button>
     </form>

@@ -1,6 +1,10 @@
 <template>
     <label class="switch">
-        <input type="checkbox" :checked="modelValue" @click="toggleCheckbox" />
+        <input
+            type="checkbox"
+            :checked="modelValue"
+            @click="toggleCheckbox"
+        />
         <div class="slider round"></div>
     </label>
 </template>

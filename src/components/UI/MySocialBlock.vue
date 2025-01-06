@@ -7,7 +7,12 @@
         :target="link.target"
         :rel="link.rel"
     >
-        <icon-base :width="35" :height="35" :icon-name="link.name"> </icon-base>
+        <icon-base
+            :width="35"
+            :height="35"
+            :icon-name="link.name"
+        >
+        </icon-base>
     </a>
 </template>
 

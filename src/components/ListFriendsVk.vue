@@ -1,7 +1,10 @@
 <template>
     <section class="friends">
         <ul class="friends__list">
-            <li v-for="user in friends" class="friends__item">
+            <li
+                v-for="user in friends"
+                class="friends__item"
+            >
                 <div class="friends__container">
                     <img
                         class="friends__image"

@@ -1,13 +1,10 @@
 <template>
     <div class="project-description">
         <div className="project-description__content">
-            <h2 class="section-title project-description__title">
-                Pet Project
-            </h2>
+            <h2 class="section-title project-description__title">Pet Project</h2>
             <p class="project-text">
                 Сам проект одностраничное приложение(SPA).<br />
-                Свёрстано по БЭМ с использованием технологий позволяющих делать
-                сайт адаптивным и резиновым (@media - меди запросы, FLEX BOX)<br />
+                Свёрстано по БЭМ с использованием технологий позволяющих делать сайт адаптивным и резиновым (@media - меди запросы, FLEX BOX)<br />
                 vue делает приложение динамичным.<br />
                 На данном этапе используется стороннее [API].<br />
             </p>

@@ -1,8 +1,17 @@
 <template>
     <div class="navbar">
         <div class="navbar__links">
-            <router-link class="navbar__link" to="/posts"> posts </router-link>
-            <router-link class="navbar__link" to="/about">about</router-link>
+            <router-link
+                class="navbar__link"
+                to="/posts"
+            >
+                posts
+            </router-link>
+            <router-link
+                class="navbar__link"
+                to="/about"
+                >about</router-link
+            >
             <basic-toggle-switch v-model="checked" />
         </div>
     </div>
@@ -15,10 +24,7 @@
     let checked = ref('');
 
     onMounted(() => {
-        if (
-            localStorage.nameTheme === 'dark' ||
-            localStorage.nameTheme === undefined
-        ) {
+        if (localStorage.nameTheme === 'dark' || localStorage.nameTheme === undefined) {
             checked.value = true;
         } else {
             checked.value = false;
