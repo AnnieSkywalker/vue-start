@@ -43,7 +43,6 @@ export const postsModule = {
             state.totalPage = totalPage;
         },
         setSearchQuery(state, searchQuery) {
-            console.log(searchQuery);
             state.searchQuery = searchQuery;
         },
     },
